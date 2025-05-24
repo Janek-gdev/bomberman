@@ -7,7 +7,7 @@ namespace Bomberman.Level
 {
     [CreateAssetMenu(menuName = MenuName.LevelLayout + nameof(LevelLayoutGeneratorModel),
         fileName = nameof(LevelLayoutGeneratorModel))]
-    public class LevelLayoutGeneratorModel : ResettableScriptableObject
+    public class LevelLayoutGeneratorModel : ResettableScriptableSingleton<LevelLayoutGeneratorModel>
     {
         [SerializeField] private int _columns = 13;
         [SerializeField] private int _rows = 11;
@@ -41,21 +41,17 @@ namespace Bomberman.Level
             }
         }
 
-        protected override void ResetAfterPlayInEditor()
-        {
-            base.ResetAfterPlayInEditor();
-            _freeCoords = new List<Vector2>();
-            _blockedCoords = new List<Vector2>();
-        }
-
         private void GenerateCoords()
         {
+            _blockedCoords = new List<Vector2>();
+            _freeCoords = new List<Vector2>();
             for (var currentColumn = 0; currentColumn < _columns; currentColumn++)
             {
                 for (var currentRow = 0; currentRow < _rows; currentRow++)
                 {
                     var coord = new Vector2(currentColumn, currentRow);
 
+                    // Generate blocked spaces on 2nd rows/columns
                     if (currentColumn % 2 == 1 && currentRow % 2 == 1)
                         _blockedCoords.Add(coord);
                     else
@@ -66,15 +62,22 @@ namespace Bomberman.Level
             
             for (var row = -1; row <= _rows; row++)
             {
-                _blockedCoords.Add(new Vector2(-1, row));
-                _blockedCoords.Add(new Vector2(_columns, row));
+                _blockedCoords.Add(new Vector2(-1, row)); // Left
+                _blockedCoords.Add(new Vector2(_columns, row)); // Right
             }
 
             for (var col = -1; col <= _columns; col++)
             {
-                _blockedCoords.Add(new Vector2(col, -1));
-                _blockedCoords.Add(new Vector2(col, _rows));
+                _blockedCoords.Add(new Vector2(col, -1)); // Top
+                _blockedCoords.Add(new Vector2(col, _rows)); // Bottom
             }
+        }
+
+        protected override void ResetAfterPlayInEditor()
+        {
+            base.ResetAfterPlayInEditor();
+            _freeCoords = new List<Vector2>();
+            _blockedCoords = new List<Vector2>();
         }
     }
 }
