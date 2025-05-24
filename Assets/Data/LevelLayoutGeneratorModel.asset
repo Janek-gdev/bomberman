@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796e12984540dec4bb9a3ca3e85e208b, type: 3}
   m_Name: LevelLayoutGeneratorModel
   m_EditorClassIdentifier: 
-  _columns: 13
+  _columns: 25
   _rows: 11
