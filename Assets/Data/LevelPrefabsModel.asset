@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82789aaf8f974472addf0da3fc07207c, type: 3}
+  m_Name: LevelPrefabsModel
+  m_EditorClassIdentifier: 
+  _destructiblePrefab: {fileID: 952178147495126683, guid: 38fac5f4fb6078c429d5e581de0fd3f1, type: 3}
+  _enemyPrefabs:
+  - _enemyModel: {fileID: 11400000, guid: de352d8bdc72a9b46962c2d8369efd0d, type: 2}
+    Prefab: {fileID: 2786870201641539900, guid: d749d43d4730525408d330a61c8bb26b, type: 3}
+  _exitDoor: {fileID: 0}

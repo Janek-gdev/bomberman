@@ -17,7 +17,7 @@ namespace Bomberman.Level
         }
         
         [SerializeField] private List<EnemyCounter> _enemies;
-        [SerializeField] private int _destructibleTileCount;
+        [SerializeField, Min(2)] private int _destructibleTileCount;
         [SerializeField] private PowerUp _availablePowerUp;
         [SerializeField] private LevelPrefabsModel _levelPrefabsModel;
 

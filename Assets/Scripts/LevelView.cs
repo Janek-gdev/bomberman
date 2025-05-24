@@ -10,7 +10,7 @@ namespace Bomberman.Level
         [SerializeField] private LevelModel _levelModel;
         private const int PowerUpIndex = 0;
         private const int ExitIndex = 1;
-        private void Awake()
+        private void OnEnable()
         {
             GenerateLevel();
         }
@@ -32,49 +32,6 @@ namespace Bomberman.Level
             SpawnExit();
         }
 
-        private void SpawnExit()
-        {
-            _levelModel.SpawnedDestructibleTiles[ExitIndex].IsExit = true;
-        }
-
-        private void SpawnPowerUp()
-        {
-            _levelModel.SpawnedDestructibleTiles[PowerUpIndex].PowerUp = _levelModel.AvailablePowerUp;
-        }
-
-        private void SpawnDestructibleTiles(List<Vector2> shuffledFreeCoords)
-        {
-            for (var i = 0; i < _levelModel.DestructibleTileCount; i++)
-            {
-                var destructibleTile = Instantiate(_levelModel.Prefabs.DestructiblePrefab, shuffledFreeCoords[i],
-                    Quaternion.identity, transform);
-                _levelModel.SpawnedDestructibleTiles.Add(destructibleTile);
-                destructibleTile.OnDestroyed += OnTileDestroyed;
-            }
-        }
-
-        private void SpawnEnemies(List<Vector2> shuffledFreeCoords, int freeTileStartingIndex)
-        {
-            var freeTileIndex = freeTileStartingIndex;
-            foreach (var enemyCounter in _levelModel.Enemies)
-            {
-                for (int i = 0; i < freeTileIndex; i++)
-                {
-                    var spawnedEnemy = Instantiate(_levelModel.Prefabs.EnemyPrefabs.First(x => x._enemyModel == enemyCounter._enemyModel).Prefab, shuffledFreeCoords[i],
-                        Quaternion.identity, transform);
-                    _levelModel.SpawnedEnemies.Add(spawnedEnemy);
-                }
-
-                freeTileIndex += enemyCounter.Amount;
-            }
-        }
-
-        private void OnTileDestroyed(DestructibleTile destroyedTile)
-        {
-            _levelModel.SpawnedDestructibleTiles.Remove(destroyedTile);
-            destroyedTile.OnDestroyed -= OnTileDestroyed;
-        }
-
         private static List<Vector2> GetShuffledFreeCoords(List<Vector2> freeCoords)
         {
             var shuffledFreeCoords = new List<Vector2>(freeCoords);
@@ -85,6 +42,52 @@ namespace Bomberman.Level
             }
 
             return shuffledFreeCoords;
+        }
+
+        private void SpawnDestructibleTiles(List<Vector2> shuffledFreeCoords)
+        {
+            for (var i = 0; i < _levelModel.DestructibleTileCount; i++)
+            {
+                var destructibleTile = Instantiate(_levelModel.Prefabs.DestructiblePrefab, shuffledFreeCoords[i],
+                    Quaternion.identity, transform);
+                destructibleTile.name = $"Destructible tile {shuffledFreeCoords[i].x}/{shuffledFreeCoords[i].y}";
+                _levelModel.SpawnedDestructibleTiles.Add(destructibleTile);
+                destructibleTile.OnDestroyed += OnTileDestroyed;
+            }
+        }
+
+        private void OnTileDestroyed(DestructibleTile destroyedTile)
+        {
+            _levelModel.SpawnedDestructibleTiles.Remove(destroyedTile);
+            destroyedTile.OnDestroyed -= OnTileDestroyed;
+        }
+
+        private void SpawnEnemies(List<Vector2> shuffledFreeCoords, int freeTileStartingIndex)
+        {
+            var freeTileIndex = freeTileStartingIndex;
+            foreach (var enemyCounter in _levelModel.Enemies)
+            {
+                for (int i = freeTileIndex; i < freeTileIndex + enemyCounter.Amount; i++)
+                {
+                    var spawnedEnemy = Instantiate(_levelModel.Prefabs.EnemyPrefabs.First(x => x._enemyModel == enemyCounter._enemyModel).Prefab, shuffledFreeCoords[i],
+                        Quaternion.identity, transform);
+                    _levelModel.SpawnedEnemies.Add(spawnedEnemy);
+                }
+
+                freeTileIndex += enemyCounter.Amount;
+            }
+        }
+
+        private void SpawnExit()
+        {
+            _levelModel.SpawnedDestructibleTiles[ExitIndex].IsExit = true;
+            Debug.Log($"Exit spawned on {_levelModel.SpawnedDestructibleTiles[ExitIndex].name}");
+        }
+
+        private void SpawnPowerUp()
+        {
+            _levelModel.SpawnedDestructibleTiles[PowerUpIndex].PowerUp = _levelModel.AvailablePowerUp;
+            Debug.Log($"Power up spawned on {_levelModel.SpawnedDestructibleTiles[PowerUpIndex].name}");
         }
     }
 }
