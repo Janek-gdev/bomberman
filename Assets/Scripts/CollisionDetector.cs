@@ -6,12 +6,16 @@ namespace Bomberman.Collisions
     public class CollisionDetector : MonoBehaviour
     {
         [SerializeField] private LayerMask _walkableLayerMask;
-        private RaycastHit2D[] _results = new RaycastHit2D[10];
+        private readonly RaycastHit2D[] _results = new RaycastHit2D[10];
 
         public bool IsDirectionWalkable(Direction direction)
         {
-            var directionVector = GetDirectionVector(direction);
-            var hits = Physics2D.RaycastNonAlloc(transform.position, directionVector, _results, 1, _walkableLayerMask);
+            return IsDirectionWalkable(GetDirectionVector(direction));
+        }
+
+        public bool IsDirectionWalkable(Vector2 direction)
+        {
+            var hits = Physics2D.RaycastNonAlloc(transform.position, direction, _results, 1, _walkableLayerMask);
             return hits == 0;
         }
 

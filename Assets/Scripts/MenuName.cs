@@ -7,5 +7,6 @@
         public const string LevelLayout = Bomberman + "Level Layout/";
         
         public const string Enemies = Bomberman + "Enemies/";
+        public const string Player = Bomberman + "Player/";
     }
 }

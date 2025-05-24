@@ -30,17 +30,25 @@ namespace Bomberman.Level
 
             SpawnPowerUp();
             SpawnExit();
+            SpawnPlayer();
         }
+
+        
 
         private static List<Vector2> GetShuffledFreeCoords(List<Vector2> freeCoords)
         {
             var shuffledFreeCoords = new List<Vector2>(freeCoords);
+            //Remove top left corner so we can spawn the player there
+            shuffledFreeCoords.RemoveAll(coord =>
+                (coord.x == 0 && coord.y == 0) ||
+                (coord.x == 1 && coord.y == 0) ||
+                (coord.x == 0 && coord.y == 1));
+            
             for (int i = 0; i < shuffledFreeCoords.Count; i++)
             {
                 var swapIndex = Random.Range(i, shuffledFreeCoords.Count);
                 (shuffledFreeCoords[i], shuffledFreeCoords[swapIndex]) = (shuffledFreeCoords[swapIndex], shuffledFreeCoords[i]);
             }
-
             return shuffledFreeCoords;
         }
 
@@ -88,6 +96,11 @@ namespace Bomberman.Level
         {
             _levelModel.SpawnedDestructibleTiles[PowerUpIndex].PowerUp = _levelModel.AvailablePowerUp;
             Debug.Log($"Power up spawned on {_levelModel.SpawnedDestructibleTiles[PowerUpIndex].name}");
+        }
+        
+        private void SpawnPlayer()
+        {
+            Instantiate(_levelModel.Prefabs.Player, new Vector2(0, 0), Quaternion.identity);
         }
     }
 }

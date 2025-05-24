@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Bomberman.Collisions;
 using Bomberman.Enemies;
+using Bomberman.Player;
 using UnityEngine;
 
 namespace Bomberman.Level
@@ -18,7 +20,9 @@ namespace Bomberman.Level
         [SerializeField] private DestructibleTile _destructiblePrefab;
         [SerializeField] private List<EnemyPrefab> _enemyPrefabs;
         [SerializeField] private GameObject _exitDoor;
+        [SerializeField] private PlayerView _player;
 
+        public PlayerView Player => _player;
         public GameObject ExitDoor => _exitDoor;
         public List<EnemyPrefab> EnemyPrefabs => _enemyPrefabs;
         public DestructibleTile DestructiblePrefab => _destructiblePrefab;
