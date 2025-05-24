@@ -29,5 +29,12 @@ namespace Bomberman.Level
         public int DestructibleTileCount => _destructibleTileCount;
         public PowerUp AvailablePowerUp => _availablePowerUp;
         public LevelPrefabsModel Prefabs => _levelPrefabsModel;
+
+        protected override void ResetAfterPlayInEditor()
+        {
+            base.ResetAfterPlayInEditor();
+            SpawnedEnemies = new List<EnemyView>();
+            SpawnedDestructibleTiles = new List<DestructibleTile>();
+        }
     }
 }
