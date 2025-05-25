@@ -2,7 +2,7 @@
 
 namespace Bomberman.Player
 {
-    public class Movable : MonoBehaviour
+    public class TileMovable : MonoBehaviour
     {
         public Vector2 TargetPosition { get; set; }
         public bool IsStationary { get; private set; }

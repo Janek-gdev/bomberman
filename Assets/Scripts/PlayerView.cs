@@ -14,12 +14,6 @@ namespace Bomberman.Player
         [SerializeField] private InputActionReference _moveInput;
         
         [SerializeField] private InputActionReference _layBomb;
-        [SerializeField] private Movable _movable;
-
-        private void Awake()
-        {
-            _movable.MoveSpeed = _playerModel.MoveSpeed;
-        }
 
         private Vector2 GetStrongestAxis(Vector2 input)
         {
@@ -33,11 +27,8 @@ namespace Bomberman.Player
 
         protected void Update()
         {
-            if (_movable.IsStationary)
-            {
-                var strongestMovement = GetStrongestAxis(_moveInput.action.ReadValue<Vector2>());
-                _movable.TargetPosition += strongestMovement;
-            }
+            var strongestMovement = GetStrongestAxis(_moveInput.action.ReadValue<Vector2>());
+            transform.position += (Vector3)strongestMovement * (_playerModel.MoveSpeed * Time.deltaTime);
         }
     }
 }
