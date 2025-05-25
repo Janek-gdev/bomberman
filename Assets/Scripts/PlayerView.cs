@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace Bomberman.Player
 {
-    public class PlayerView : MonoBehaviour
+    public class PlayerView : Movable
     {
         [SerializeField] private PlayerModel _playerModel;
         [SerializeField] private Animator _animator;
@@ -15,24 +15,8 @@ namespace Bomberman.Player
         
         [SerializeField] private InputActionReference _layBomb;
 
+        protected override float MoveSpeed => _playerModel.MoveSpeed;
 
-        private Vector2 _targetPosition;
-        private void OnEnable()
-        {
-            _moveInput.action.performed += OnMovePressed;
-        }
-
-        private void OnDisable()
-        {
-            _moveInput.action.performed -= OnMovePressed;
-
-        }
-
-        private void OnMovePressed(InputAction.CallbackContext obj)
-        {
-            
-        }
-        
         private Vector2 GetStrongestAxis(Vector2 input)
         {
             if (input == Vector2.zero)
@@ -43,36 +27,15 @@ namespace Bomberman.Player
                 : new Vector2(0f, Mathf.Sign(input.y));
         }
 
-        private void Update()
+        protected override void Update()
         {
-            transform.position =
-                Vector2.MoveTowards(transform.position, _targetPosition, Time.deltaTime * _playerModel.MoveSpeed);
-
-            // if can walk
+            base.Update();
+            
+            if (_isStationary)
             {
                 var strongestMovement = GetStrongestAxis(_moveInput.action.ReadValue<Vector2>());
                 _targetPosition += strongestMovement;
             }
-            if ((transform.position - (Vector3)_targetPosition).sqrMagnitude < 0.0001f)
-            {
-                //reached destination
-            }
-        }
-
-        private void OnUpPressed(InputAction.CallbackContext obj)
-        {
-            _targetPosition = new Vector2(_targetPosition.x, _targetPosition.y + 1);
-        }
-        private void OnDownPressed(InputAction.CallbackContext obj)
-        {
-        }
-
-        private void OnLeftPressed(InputAction.CallbackContext obj)
-        {
-        }
-
-        private void OnRightPressed(InputAction.CallbackContext obj)
-        {
         }
     }
 }
