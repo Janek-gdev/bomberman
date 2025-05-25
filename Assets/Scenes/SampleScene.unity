@@ -153,8 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelLayoutGeneratorModel: {fileID: 11400000, guid: d414f7b9d1620964384be07db7e98576, type: 2}
-  _blockerPrefab: {fileID: 3687566003528153041, guid: 717ec5d8e3103a74488ceefd7743a0f7, type: 3}
-  _emptySpacePrefab: {fileID: 887155080204673546, guid: 949493a90bd309d4c89b15b32c5cc216, type: 3}
+  _levelPrefabsModel: {fileID: 11400000, guid: eced87acd955e5d438b30e5a0d4c4e13, type: 2}
 --- !u!4 &648647164
 Transform:
   m_ObjectHideFlags: 0

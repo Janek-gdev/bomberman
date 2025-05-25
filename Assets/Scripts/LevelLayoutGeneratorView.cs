@@ -5,8 +5,7 @@ namespace Bomberman.Level
     public class LevelLayoutGeneratorView : MonoBehaviour
     {
         [SerializeField] private LevelLayoutGeneratorModel _levelLayoutGeneratorModel;
-        [SerializeField] private GameObject _blockerPrefab;
-        [SerializeField] private GameObject _emptySpacePrefab;
+        [SerializeField] private LevelPrefabsModel _levelPrefabsModel;
 
         private void Awake()
         {
@@ -17,12 +16,12 @@ namespace Bomberman.Level
         {
             foreach (var blockedCoord in _levelLayoutGeneratorModel.BlockedCoords)
             {
-                Instantiate(_blockerPrefab, blockedCoord, Quaternion.identity, transform);
+                Instantiate(_levelPrefabsModel.BlockerTile, blockedCoord, Quaternion.identity, transform);
             }
             
             foreach (var freeCoord in _levelLayoutGeneratorModel.FreeCoords)
             {
-                Instantiate(_emptySpacePrefab, freeCoord, Quaternion.identity, transform);
+                Instantiate(_levelPrefabsModel.WalkableTile, freeCoord, Quaternion.identity, transform);
             }
         }
     }
