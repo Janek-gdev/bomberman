@@ -7,7 +7,20 @@ namespace Bomberman.Player
     [CreateAssetMenu(menuName = MenuName.Player + nameof(PlayerModel), fileName = nameof(PlayerModel))]
     public class PlayerModel : ResettableScriptableObject
     {
-        public bool CanBeControlled { get; set; }
+        public event Action<bool> OnIsAliveChanged;
+        [SerializeField] private bool _isAlive;
+        public bool IsAlive
+        {
+            get => _isAlive;
+            set
+            {
+                if (value != _isAlive)
+                {
+                    _isAlive = value;
+                    OnIsAliveChanged?.Invoke(_isAlive);
+                }
+            }
+        }
         
         [SerializeField] private float _moveSpeed = 1;
 
@@ -35,7 +48,7 @@ namespace Bomberman.Player
         [SerializeField] private int _baseMaxBombAllowance;
         private int _maxBombAllowance;
 
-        public int MaxMaxBombAllowance
+        public int MaxBombAllowance
         {
             get
             {
@@ -51,9 +64,9 @@ namespace Bomberman.Player
         protected override void ResetAfterPlayInEditor()
         {
             base.ResetAfterPlayInEditor();
-            MaxMaxBombAllowance = _baseMaxBombAllowance;
+            MaxBombAllowance = _baseMaxBombAllowance;
             _currentTile = null;
-            CanBeControlled = true;
+            IsAlive = true;
         }
         
     }

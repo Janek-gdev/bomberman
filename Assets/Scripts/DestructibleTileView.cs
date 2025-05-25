@@ -9,6 +9,7 @@ namespace Bomberman.Level
         public WalkableTileModel TileModel;
         public void GetBombed()
         {
+            TileModel.IsBlocked = false;
             Destroy(gameObject);
         }
     }

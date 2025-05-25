@@ -1,4 +1,5 @@
-﻿using Bomberman.Collisions;
+﻿using System;
+using Bomberman.Collisions;
 using Bomberman.Level;
 using Bomberman.Utility;
 using UnityEngine;
@@ -16,7 +17,7 @@ namespace Bomberman.Player
 
         protected void Update()
         {
-            if (!_playerModel.CanBeControlled)
+            if (!_playerModel.IsAlive)
             {
                 return;
             }

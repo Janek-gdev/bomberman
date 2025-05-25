@@ -65,6 +65,12 @@ namespace Bomberman.Level
             //todo
         }
 
-        
+
+        public void Reset()
+        {
+            _isExit = false;
+            _powerUp = PowerUp.None;
+            IsBlocked = false;
+        }
     }
 }

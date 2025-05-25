@@ -61,7 +61,7 @@ namespace Bomberman.Bombing
             var rotation = DirectionUtility.GetRotationFromDirection(direction);
             for (int i = 1; i < _bombModel.ExplosionRange + 1; i++)
             {
-                var hits = Physics2D.RaycastNonAlloc(transform.position, directionVector, _raycastResults, 1f, _explosionStoppingLayers);
+                var hits = Physics2D.RaycastNonAlloc(transform.position, directionVector, _raycastResults, 1f * i, _explosionStoppingLayers);
                 if (hits == 0)
                 {
                     explosions.Add(Instantiate(i == _bombModel.ExplosionRange ? _endExplosionPrefab : _connectorExplosionPrefab,
@@ -71,12 +71,26 @@ namespace Bomberman.Bombing
                 {
                     for (int j = 0; j < hits; j++)
                     {
-                        if (_raycastResults[j].transform.GetComponent<IBombable>() != null)
-                        {
-                            _raycastResults[j].transform.GetComponent<IBombable>()?.GetBombed();
-                        }
+                        _raycastResults[j].transform.GetComponent<IBombable>()?.GetBombed();
                     }
                 }
+            }
+        }
+
+        private void OnDrawGizmos()
+        {
+            DrawRay(Direction.Left);
+            DrawRay(Direction.Right);
+            DrawRay(Direction.Up);
+            DrawRay(Direction.Down);
+        }
+
+        private void DrawRay(Direction direction)
+        {
+            var directionVector = DirectionUtility.GetDirectionVector(direction);
+            for (int i = 1; i < _bombModel.ExplosionRange + 1; i++)
+            {
+                Debug.DrawRay(transform.position, directionVector);
             }
         }
 

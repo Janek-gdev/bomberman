@@ -2,6 +2,7 @@
 using Bomberman.Bombing;
 using Bomberman.Player;
 using Bomberman.Pooling;
+using Bomberman.Utility;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,7 +20,7 @@ namespace Bomberman.Player
         private void OnEnable()
         {
             _layBomb.action.performed += OnLayBombPerformed;
-            GameEvents.instance.OnLevelReload += RemoveBombs;
+            GameEvents.instance.OnLevelReloadBegin += RemoveBombs;
         }
 
         private void OnDisable()
@@ -39,7 +40,7 @@ namespace Bomberman.Player
 
         private void OnLayBombPerformed(InputAction.CallbackContext obj)
         {
-            if (_laidBombs.Count >= _playerModel.MaxMaxBombAllowance || _playerModel.CurrentTile.IsBlocked || !_playerModel.CanBeControlled)
+            if (_laidBombs.Count >= _playerModel.MaxBombAllowance || _playerModel.CurrentTile.IsBlocked || !_playerModel.IsAlive)
             {
                 return;
             }

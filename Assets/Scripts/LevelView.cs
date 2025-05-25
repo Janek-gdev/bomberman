@@ -1,7 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using Bomberman.Enemies;
+using Bomberman.Player;
+using Bomberman.Utility;
 using UnityEngine;
 using UnityEngine.Assertions;
+using Random = UnityEngine.Random;
 
 namespace Bomberman.Level
 {
@@ -14,11 +19,16 @@ namespace Bomberman.Level
         {
             SpawnPlayer();
             GenerateLevel();
+            GameEvents.instance.OnLevelReloadBegin += TearDownLevel;
+            GameEvents.instance.OnLevelReloadEnd += GenerateLevel;
+            GameEvents.instance.OnLevelReloadEnd += MovePlayerToStart;
         }
-        
-        private void SpawnPlayer()
+
+        private void OnDisable()
         {
-            Instantiate(_levelModel.Prefabs.PlayerRig, Vector2.zero, Quaternion.identity);
+            GameEvents.instance.OnLevelReloadBegin -= TearDownLevel;
+            GameEvents.instance.OnLevelReloadEnd -= GenerateLevel;
+            GameEvents.instance.OnLevelReloadEnd -= MovePlayerToStart;
         }
 
         private void GenerateLevel()
@@ -37,8 +47,6 @@ namespace Bomberman.Level
             SpawnPowerUp();
             SpawnExit();
         }
-
-        
 
         private static List<WalkableTileModel> GetShuffledTiles(List<WalkableTileModel> walkableTiles)
         {
@@ -85,6 +93,17 @@ namespace Bomberman.Level
                 freeTileIndex += enemyCounter.Amount;
             }
         }
+        
+        private void SpawnPlayer()
+        {
+            _levelModel.Player = Instantiate(_levelModel.Prefabs.PlayerRig, Vector2.zero, Quaternion.identity);
+        }
+
+        private void SpawnPowerUp()
+        {
+            _levelModel.SpawnedDestructibleTiles[PowerUpIndex].TileModel.PowerUp = _levelModel.AvailablePowerUp;
+            Debug.Log($"Power up spawned on {_levelModel.SpawnedDestructibleTiles[PowerUpIndex].name}");
+        }
 
         private void SpawnExit()
         {
@@ -92,10 +111,26 @@ namespace Bomberman.Level
             Debug.Log($"Exit spawned on {_levelModel.SpawnedDestructibleTiles[ExitIndex].name}");
         }
 
-        private void SpawnPowerUp()
+        private void MovePlayerToStart()
         {
-            _levelModel.SpawnedDestructibleTiles[PowerUpIndex].TileModel.PowerUp = _levelModel.AvailablePowerUp;
-            Debug.Log($"Power up spawned on {_levelModel.SpawnedDestructibleTiles[PowerUpIndex].name}");
+            _levelModel.Player.transform.position = Vector2.zero;
+        }
+
+        private void TearDownLevel()
+        {
+            foreach (var destructibleTileView in _levelModel.SpawnedDestructibleTiles)
+            {
+                destructibleTileView.TileModel.Reset();
+                Destroy(destructibleTileView.gameObject);
+            }
+
+            foreach (var spawnedEnemy in _levelModel.SpawnedEnemies)
+            {
+                Destroy(spawnedEnemy.gameObject);
+            }
+
+            _levelModel.SpawnedDestructibleTiles = new List<DestructibleTileView>();
+            _levelModel.SpawnedEnemies = new List<EnemyView>();
         }
     }
 }
