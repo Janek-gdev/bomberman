@@ -8,5 +8,9 @@ namespace Bomberman.Player
         [SerializeField] private float _moveSpeed = 1;
 
         public float MoveSpeed => _moveSpeed;
+
+        [SerializeField] private float _gridCorrectionSpeed;
+        public float GridCorrectionSpeed => _gridCorrectionSpeed;
+        
     }
 }

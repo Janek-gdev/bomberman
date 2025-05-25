@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestructibleTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3687566003528153041, guid: 717ec5d8e3103a74488ceefd7743a0f7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7093929536074098429, guid: 717ec5d8e3103a74488ceefd7743a0f7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -86,6 +90,10 @@ PrefabInstance:
     - target: {fileID: 8253302411049575963, guid: 717ec5d8e3103a74488ceefd7743a0f7, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8496636576529824816, guid: 717ec5d8e3103a74488ceefd7743a0f7, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 717ec5d8e3103a74488ceefd7743a0f7, type: 3}

@@ -81,6 +81,17 @@ namespace Bomberman.Level
             }
         }
 
+        public Vector2 GetClosestFreeTile(Transform transform)
+        {
+            return GetClosestFreeTile(transform.position);
+        }
+
+        public Vector2 GetClosestFreeTile(Vector2 position)
+        {
+            return _freeCoords[Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y)];
+        }
+
+
         protected override void ResetAfterPlayInEditor()
         {
             base.ResetAfterPlayInEditor();
