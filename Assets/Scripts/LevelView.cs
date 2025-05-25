@@ -100,7 +100,7 @@ namespace Bomberman.Level
         
         private void SpawnPlayer()
         {
-            Instantiate(_levelModel.Prefabs.Player, new Vector2(0, 0), Quaternion.identity);
+            Instantiate(_levelModel.Prefabs.PlayerRig, new Vector2(0, 0), Quaternion.identity);
         }
     }
 }

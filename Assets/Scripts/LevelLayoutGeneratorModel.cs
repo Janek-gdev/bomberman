@@ -9,6 +9,9 @@ namespace Bomberman.Level
         fileName = nameof(LevelLayoutGeneratorModel))]
     public class LevelLayoutGeneratorModel : ResettableScriptableSingleton<LevelLayoutGeneratorModel>
     {
+        public const float TileWidth = 1f;
+        public const float HalfTileWidth = TileWidth/2;
+        
         [SerializeField] private int _columns = 13;
         [SerializeField] private int _rows = 11;
 
@@ -40,6 +43,10 @@ namespace Bomberman.Level
                 return _blockedCoords;
             }
         }
+        
+        //Overshoot by half width to account for the fact the columns and min don't include sprite size
+        public Vector2 MinTilePosition => new(-TileWidth-HalfTileWidth, -TileWidth-HalfTileWidth);
+        public Vector2 MaxTilePosition => new(_columns + HalfTileWidth, _rows + HalfTileWidth);
 
         private void GenerateCoords()
         {

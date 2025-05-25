@@ -17,6 +17,6 @@ MonoBehaviour:
   - _enemyModel: {fileID: 11400000, guid: de352d8bdc72a9b46962c2d8369efd0d, type: 2}
     Prefab: {fileID: 8628380674280720462, guid: 544499f5f05346a40bc84063fb4a12b4, type: 3}
   _exitDoor: {fileID: 0}
-  _player: {fileID: 4866820579560827055, guid: 80209bee483bdef41b52e0425c2eafec, type: 3}
+  _playerRig: {fileID: 2710498050057431178, guid: e62d0af29540dca4ba2dae4b4370b7f6, type: 3}
   _blockerTile: {fileID: 6696683332767228150, guid: 8477d45b34357e941bac97caac203f28, type: 3}
   _walkableTile: {fileID: 6696683332767228150, guid: 5735960ed58d1cf448f7e272cc96caff, type: 3}

@@ -20,14 +20,14 @@ namespace Bomberman.Level
         [SerializeField] private DestructibleTile _destructiblePrefab;
         [SerializeField] private List<EnemyPrefab> _enemyPrefabs;
         [SerializeField] private GameObject _exitDoor;
-        [SerializeField] private PlayerView _player;
+        [SerializeField] private GameObject _playerRig;
         [SerializeField] private GameObject _blockerTile;
         [SerializeField] private GameObject _walkableTile;
         public GameObject BlockerTile => _blockerTile;
         public GameObject WalkableTile => _walkableTile;
         
 
-        public PlayerView Player => _player;
+        public GameObject PlayerRig => _playerRig;
         public GameObject ExitDoor => _exitDoor;
         public List<EnemyPrefab> EnemyPrefabs => _enemyPrefabs;
         public DestructibleTile DestructiblePrefab => _destructiblePrefab;
