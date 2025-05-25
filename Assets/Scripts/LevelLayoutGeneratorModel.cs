@@ -12,14 +12,14 @@ namespace Bomberman.Level
         [SerializeField] private int _columns = 13;
         [SerializeField] private int _rows = 11;
 
-        private List<Vector2> _freeCoords = new();
+        private Vector2[,] _freeCoords;
         private List<Vector2> _blockedCoords = new();
 
-        public List<Vector2> FreeCoords
+        public Vector2[,] FreeCoords
         {
             get
             {
-                if (_freeCoords.Count == 0)
+                if (_freeCoords.Length == 0)
                 {
                     GenerateCoords();
                 }
@@ -44,7 +44,7 @@ namespace Bomberman.Level
         private void GenerateCoords()
         {
             _blockedCoords = new List<Vector2>();
-            _freeCoords = new List<Vector2>();
+            _freeCoords = new Vector2[_columns, _rows];
             for (var currentColumn = 0; currentColumn < _columns; currentColumn++)
             {
                 for (var currentRow = 0; currentRow < _rows; currentRow++)
@@ -55,7 +55,8 @@ namespace Bomberman.Level
                     if (currentColumn % 2 == 1 && currentRow % 2 == 1)
                         _blockedCoords.Add(coord);
                     else
-                        _freeCoords.Add(coord);
+                        //slightly redundant data usage here, having an array whose indices hold the same information, but allows us to work off a separate scale later
+                        _freeCoords[currentColumn, currentRow] = coord;
                 }
             }
 
@@ -76,7 +77,7 @@ namespace Bomberman.Level
         protected override void ResetAfterPlayInEditor()
         {
             base.ResetAfterPlayInEditor();
-            _freeCoords = new List<Vector2>();
+            _freeCoords = new Vector2[_columns, _rows];
             _blockedCoords = new List<Vector2>();
         }
     }

@@ -17,7 +17,7 @@ namespace Bomberman.Level
 
         private void GenerateLevel()
         {
-            var freeCoords = LevelLayoutGeneratorModel.instance.FreeCoords;
+            var freeCoords = LevelLayoutGeneratorModel.instance.FreeCoords.Cast<Vector2>().ToList();
             
             Assert.IsTrue(_levelModel.DestructibleTileCount < freeCoords.Count);
 
