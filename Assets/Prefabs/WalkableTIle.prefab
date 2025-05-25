@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1298438146673283196, guid: 717ec5d8e3103a74488ceefd7743a0f7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298438146673283196, guid: 717ec5d8e3103a74488ceefd7743a0f7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3687566003528153041, guid: 717ec5d8e3103a74488ceefd7743a0f7, type: 3}
       propertyPath: m_Name
       value: WalkableTIle

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Bomberman.Utility;
 using UnityEngine;
 
 namespace Bomberman.Collisions
@@ -16,7 +17,7 @@ namespace Bomberman.Collisions
             {
                 return false;
             }
-            return IsDirectionWalkable(GetDirectionVector(direction));
+            return IsDirectionWalkable(DirectionUtility.GetDirectionVector(direction));
         }
 
         public bool IsDirectionWalkable(Vector2 direction)
@@ -25,16 +26,6 @@ namespace Bomberman.Collisions
             return hits == 0;
         }
 
-        public Vector2 GetDirectionVector(Direction direction)
-        {
-            return direction switch
-            {
-                Direction.Left => Vector2.left,
-                Direction.Right => Vector2.right,
-                Direction.Up => Vector2.up,
-                Direction.Down => Vector2.down,
-                _ => Vector2.zero
-            };
-        }
+        
     }
 }

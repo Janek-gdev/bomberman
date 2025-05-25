@@ -7,6 +7,8 @@ namespace Bomberman.Player
     [CreateAssetMenu(menuName = MenuName.Player + nameof(PlayerModel), fileName = nameof(PlayerModel))]
     public class PlayerModel : ResettableScriptableObject
     {
+        public bool CanBeControlled { get; set; }
+        
         [SerializeField] private float _moveSpeed = 1;
 
         public float MoveSpeed => _moveSpeed;
@@ -51,6 +53,7 @@ namespace Bomberman.Player
             base.ResetAfterPlayInEditor();
             MaxMaxBombAllowance = _baseMaxBombAllowance;
             _currentTile = null;
+            CanBeControlled = true;
         }
         
     }

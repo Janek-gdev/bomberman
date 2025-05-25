@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82789aaf8f974472addf0da3fc07207c, type: 3}
   m_Name: LevelPrefabsModel
   m_EditorClassIdentifier: 
-  _destructiblePrefab: {fileID: 8470150044625047824, guid: f0e82a369e013284caf6a14ae33f8193, type: 3}
+  _destructiblePool: {fileID: 11400000, guid: 2239f63b35f6bae4a92489a01ba5625b, type: 2}
   _enemyPrefabs:
-  - _enemyModel: {fileID: 11400000, guid: de352d8bdc72a9b46962c2d8369efd0d, type: 2}
-    Prefab: {fileID: 8628380674280720462, guid: 544499f5f05346a40bc84063fb4a12b4, type: 3}
+  - EnemyModel: {fileID: 11400000, guid: de352d8bdc72a9b46962c2d8369efd0d, type: 2}
+    Pool: {fileID: 11400000, guid: b7cffe09fbdedea48b318fefb997bd24, type: 2}
   _exitDoor: {fileID: 0}
   _playerRig: {fileID: 2710498050057431178, guid: e62d0af29540dca4ba2dae4b4370b7f6, type: 3}
   _blockerTile: {fileID: 6696683332767228150, guid: 8477d45b34357e941bac97caac203f28, type: 3}

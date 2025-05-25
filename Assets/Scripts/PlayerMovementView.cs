@@ -1,5 +1,6 @@
 ﻿using Bomberman.Collisions;
 using Bomberman.Level;
+using Bomberman.Utility;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,10 +16,14 @@ namespace Bomberman.Player
 
         protected void Update()
         {
+            if (!_playerModel.CanBeControlled)
+            {
+                return;
+            }
             var strongestMovementDirection = GetInputDirection(_moveInput.action.ReadValue<Vector2>());
             if (_collisionDetector.IsDirectionWalkable(strongestMovementDirection))
             {
-                var movement = (Vector3) _collisionDetector.GetDirectionVector(strongestMovementDirection) *
+                var movement = (Vector3) DirectionUtility.GetDirectionVector(strongestMovementDirection) *
                                       (_playerModel.MoveSpeed * Time.deltaTime);
                 movement += GetGridCorrection(strongestMovementDirection);
 

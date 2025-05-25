@@ -9,6 +9,6 @@
         public const string Enemies = Bomberman + "Enemies/";
         public const string Player = Bomberman + "Player/";
         public const string Pooling = Bomberman + "Pooling/";
-        
+        public const string Bombing = Bomberman + "Bombing/";
     }
 }

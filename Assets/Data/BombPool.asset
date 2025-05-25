@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e733c1c6acd40dcab64ba1ae3ce9c07, type: 3}
   m_Name: BombPool
   m_EditorClassIdentifier: 
-  _poolableObject: {fileID: 0}
+  _poolableObject: {fileID: 4109612900590110458, guid: 8bd7a9ea081fe8c4ab911d75f70508aa, type: 3}

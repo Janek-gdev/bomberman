@@ -2,8 +2,15 @@
 
 namespace Bomberman.Bombing
 {
+    [CreateAssetMenu(menuName = MenuName.Bombing + nameof(BombModel), fileName = nameof(BombModel))]
     public class BombModel : ResettableScriptableObject
     {
+        [SerializeField] private float _explosionDuration;
+        public float ExplosionDuration => _explosionDuration;
+        
+        [SerializeField] private float _timeToExplode;
+        public float TimeToExplode => _timeToExplode;
+        
         [SerializeField] private int _baseExplosionRange;
         private int _explosionRange;
 
