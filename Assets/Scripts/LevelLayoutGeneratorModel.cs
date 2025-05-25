@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,19 +14,20 @@ namespace Bomberman.Level
         [SerializeField] private int _columns = 13;
         [SerializeField] private int _rows = 11;
 
-        private Vector2[,] _freeCoords;
+        private List<WalkableTileModel> _walkableTiles;
+        private WalkableTileModel[,] _indexedWalkableTiles;
         private List<Vector2> _blockedCoords = new();
 
-        public Vector2[,] FreeCoords
+        public List<WalkableTileModel> WalkableTiles
         {
             get
             {
-                if (_freeCoords.Length == 0)
+                if (_walkableTiles.Count == 0)
                 {
                     GenerateCoords();
                 }
 
-                return _freeCoords;
+                return _walkableTiles;
             }
         }
         
@@ -51,7 +51,8 @@ namespace Bomberman.Level
         private void GenerateCoords()
         {
             _blockedCoords = new List<Vector2>();
-            _freeCoords = new Vector2[_columns, _rows];
+            _walkableTiles = new List<WalkableTileModel>();
+            _indexedWalkableTiles = new WalkableTileModel[_columns,_rows];
             for (var currentColumn = 0; currentColumn < _columns; currentColumn++)
             {
                 for (var currentRow = 0; currentRow < _rows; currentRow++)
@@ -60,10 +61,15 @@ namespace Bomberman.Level
 
                     // Generate blocked spaces on 2nd rows/columns
                     if (currentColumn % 2 == 1 && currentRow % 2 == 1)
+                    {
                         _blockedCoords.Add(coord);
+                    }
                     else
-                        //slightly redundant data usage here, having an array whose indices hold the same information, but allows us to work off a separate scale later
-                        _freeCoords[currentColumn, currentRow] = coord;
+                    {
+                        var walkable = new WalkableTileModel(coord);
+                        _walkableTiles.Add(walkable);
+                        _indexedWalkableTiles[currentColumn, currentRow] = walkable;
+                    }
                 }
             }
 
@@ -81,23 +87,24 @@ namespace Bomberman.Level
             }
         }
 
-        public Vector2 GetClosestFreeTile(Transform transform)
+        public WalkableTileModel GetClosestFreeTile(Transform transform)
         {
             return GetClosestFreeTile(transform.position);
         }
 
-        public Vector2 GetClosestFreeTile(Vector2 position)
+        public WalkableTileModel GetClosestFreeTile(Vector2 position)
         {
-            return _freeCoords[Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y)];
+            return _indexedWalkableTiles[Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y)];
         }
-
 
         protected override void ResetAfterPlayInEditor()
         {
             base.ResetAfterPlayInEditor();
-            _freeCoords = new Vector2[_columns, _rows];
+            _indexedWalkableTiles = new WalkableTileModel[_columns,_rows];
+            _walkableTiles = new List<WalkableTileModel>();
             _blockedCoords = new List<Vector2>();
         }
+
     }
 }
 

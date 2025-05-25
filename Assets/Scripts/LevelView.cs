@@ -12,16 +12,22 @@ namespace Bomberman.Level
         private const int ExitIndex = 1;
         private void OnEnable()
         {
+            SpawnPlayer();
             GenerateLevel();
+        }
+        
+        private void SpawnPlayer()
+        {
+            Instantiate(_levelModel.Prefabs.PlayerRig, Vector2.zero, Quaternion.identity);
         }
 
         private void GenerateLevel()
         {
-            var freeCoords = LevelLayoutGeneratorModel.instance.FreeCoords.Cast<Vector2>().ToList();
+            var walkableTiles = LevelLayoutGeneratorModel.instance.WalkableTiles;
             
-            Assert.IsTrue(_levelModel.DestructibleTileCount < freeCoords.Count);
+            Assert.IsTrue(_levelModel.DestructibleTileCount < walkableTiles.Count);
 
-            var shuffledFreeCoords = GetShuffledFreeCoords(freeCoords);
+            var shuffledFreeCoords = GetShuffledTiles(walkableTiles);
 
             SpawnDestructibleTiles(shuffledFreeCoords);
 
@@ -30,54 +36,48 @@ namespace Bomberman.Level
 
             SpawnPowerUp();
             SpawnExit();
-            SpawnPlayer();
         }
 
         
 
-        private static List<Vector2> GetShuffledFreeCoords(List<Vector2> freeCoords)
+        private static List<WalkableTileModel> GetShuffledTiles(List<WalkableTileModel> walkableTiles)
         {
-            var shuffledFreeCoords = new List<Vector2>(freeCoords);
+            var shuffledTiles = new List<WalkableTileModel>(walkableTiles.Where(x => x != null));
             //Remove top left corner so we can spawn the player there
-            shuffledFreeCoords.RemoveAll(coord =>
-                (coord.x == 0 && coord.y == 0) ||
-                (coord.x == 1 && coord.y == 0) ||
-                (coord.x == 0 && coord.y == 1));
+            shuffledTiles.RemoveAll(tile =>
+                (tile.Position.x == 0 && tile.Position.y == 0) ||
+                (tile.Position.x == 1 && tile.Position.y == 0) ||
+                (tile.Position.x == 0 && tile.Position.y == 1));
             
-            for (int i = 0; i < shuffledFreeCoords.Count; i++)
+            for (int i = 0; i < shuffledTiles.Count; i++)
             {
-                var swapIndex = Random.Range(i, shuffledFreeCoords.Count);
-                (shuffledFreeCoords[i], shuffledFreeCoords[swapIndex]) = (shuffledFreeCoords[swapIndex], shuffledFreeCoords[i]);
+                var swapIndex = Random.Range(i, shuffledTiles.Count);
+                (shuffledTiles[i], shuffledTiles[swapIndex]) = (shuffledTiles[swapIndex], shuffledTiles[i]);
             }
-            return shuffledFreeCoords;
+            return shuffledTiles;
         }
 
-        private void SpawnDestructibleTiles(List<Vector2> shuffledFreeCoords)
+        private void SpawnDestructibleTiles(List<WalkableTileModel> shuffledTiles)
         {
             for (var i = 0; i < _levelModel.DestructibleTileCount; i++)
             {
-                var destructibleTile = Instantiate(_levelModel.Prefabs.DestructiblePrefab, shuffledFreeCoords[i],
+                var destructibleTile = _levelModel.Prefabs.DestructibleTilePool.Spawn(shuffledTiles[i].Position,
                     Quaternion.identity, transform);
-                destructibleTile.name = $"Destructible tile {shuffledFreeCoords[i].x}/{shuffledFreeCoords[i].y}";
+                destructibleTile.name = $"Destructible tile {shuffledTiles[i].Position.x}/{shuffledTiles[i].Position.y}";
+                destructibleTile.TileModel = shuffledTiles[i];
+                destructibleTile.TileModel.IsBlocked = true;
                 _levelModel.SpawnedDestructibleTiles.Add(destructibleTile);
-                destructibleTile.OnDestroyed += OnTileDestroyed;
             }
         }
 
-        private void OnTileDestroyed(DestructibleTile destroyedTile)
-        {
-            _levelModel.SpawnedDestructibleTiles.Remove(destroyedTile);
-            destroyedTile.OnDestroyed -= OnTileDestroyed;
-        }
-
-        private void SpawnEnemies(List<Vector2> shuffledFreeCoords, int freeTileStartingIndex)
+        private void SpawnEnemies(List<WalkableTileModel> shuffledTiles, int freeTileStartingIndex)
         {
             var freeTileIndex = freeTileStartingIndex;
             foreach (var enemyCounter in _levelModel.Enemies)
             {
                 for (int i = freeTileIndex; i < freeTileIndex + enemyCounter.Amount; i++)
                 {
-                    var spawnedEnemy = Instantiate(_levelModel.Prefabs.EnemyPrefabs.First(x => x._enemyModel == enemyCounter._enemyModel).Prefab, shuffledFreeCoords[i],
+                    var spawnedEnemy = _levelModel.Prefabs.EnemyPrefabs.First(x => x.EnemyModel == enemyCounter._enemyModel).Pool.Spawn(shuffledTiles[i].Position,
                         Quaternion.identity, transform);
                     _levelModel.SpawnedEnemies.Add(spawnedEnemy);
                 }
@@ -88,19 +88,14 @@ namespace Bomberman.Level
 
         private void SpawnExit()
         {
-            _levelModel.SpawnedDestructibleTiles[ExitIndex].IsExit = true;
+            _levelModel.SpawnedDestructibleTiles[ExitIndex].TileModel.IsExit = true;
             Debug.Log($"Exit spawned on {_levelModel.SpawnedDestructibleTiles[ExitIndex].name}");
         }
 
         private void SpawnPowerUp()
         {
-            _levelModel.SpawnedDestructibleTiles[PowerUpIndex].PowerUp = _levelModel.AvailablePowerUp;
+            _levelModel.SpawnedDestructibleTiles[PowerUpIndex].TileModel.PowerUp = _levelModel.AvailablePowerUp;
             Debug.Log($"Power up spawned on {_levelModel.SpawnedDestructibleTiles[PowerUpIndex].name}");
-        }
-        
-        private void SpawnPlayer()
-        {
-            Instantiate(_levelModel.Prefabs.PlayerRig, new Vector2(0, 0), Quaternion.identity);
         }
     }
 }

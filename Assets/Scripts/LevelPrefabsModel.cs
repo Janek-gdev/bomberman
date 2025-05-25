@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Bomberman.Collisions;
 using Bomberman.Enemies;
 using Bomberman.Player;
+using Bomberman.Pooling;
 using UnityEngine;
 
 namespace Bomberman.Level
@@ -13,11 +14,11 @@ namespace Bomberman.Level
         [Serializable]
         public class EnemyPrefab
         {
-            public EnemyModel _enemyModel;
-            public EnemyView Prefab;
+            public EnemyModel EnemyModel;
+            public EnemyPool Pool;
         }
         
-        [SerializeField] private DestructibleTile _destructiblePrefab;
+        [SerializeField] private DestructibleTilePool _destructiblePool;
         [SerializeField] private List<EnemyPrefab> _enemyPrefabs;
         [SerializeField] private GameObject _exitDoor;
         [SerializeField] private GameObject _playerRig;
@@ -30,6 +31,6 @@ namespace Bomberman.Level
         public GameObject PlayerRig => _playerRig;
         public GameObject ExitDoor => _exitDoor;
         public List<EnemyPrefab> EnemyPrefabs => _enemyPrefabs;
-        public DestructibleTile DestructiblePrefab => _destructiblePrefab;
+        public DestructibleTilePool DestructibleTilePool => _destructiblePool;
     }
 }

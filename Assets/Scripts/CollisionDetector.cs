@@ -22,7 +22,6 @@ namespace Bomberman.Collisions
         public bool IsDirectionWalkable(Vector2 direction)
         {
             var hits = Physics2D.RaycastNonAlloc(transform.position, direction, _raycastResults, _raycastDistance, _nonWalkableLayerMask);
-            Debug.Log(_raycastResults[0]);
             return hits == 0;
         }
 

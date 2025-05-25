@@ -19,9 +19,12 @@ namespace Bomberman.Level
                 Instantiate(_levelPrefabsModel.BlockerTile, blockedCoord, Quaternion.identity, transform);
             }
             
-            foreach (var freeCoord in _levelLayoutGeneratorModel.FreeCoords)
+            foreach (var freeCoord in _levelLayoutGeneratorModel.WalkableTiles)
             {
-                Instantiate(_levelPrefabsModel.WalkableTile, freeCoord, Quaternion.identity, transform);
+                if (freeCoord != null)
+                {
+                    Instantiate(_levelPrefabsModel.WalkableTile, freeCoord.Position, Quaternion.identity, transform);
+                }
             }
         }
     }

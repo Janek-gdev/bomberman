@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 8108137167917359268}
   - component: {fileID: 4338624725751255181}
   - component: {fileID: 4056681961448886989}
-  m_Layer: 0
+  - component: {fileID: 3089582142917221221}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +86,6 @@ MonoBehaviour:
   _animator: {fileID: 3682193771497456224}
   _collisionDetector: {fileID: 8108137167917359268}
   _moveInput: {fileID: -639187968204785771, guid: 06d748555ede1234bb923740bbd78d34, type: 3}
-  _layBomb: {fileID: -2408093651466078954, guid: 06d748555ede1234bb923740bbd78d34, type: 3}
 --- !u!95 &3682193771497456224
 Animator:
   serializedVersion: 5
@@ -161,6 +161,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.76, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3089582142917221221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33278697014163521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1606df291449f486245be0243021d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layBomb: {fileID: -2408093651466078954, guid: 06d748555ede1234bb923740bbd78d34, type: 3}
+  _bombPool: {fileID: 11400000, guid: df3471f154016ab4c9a5bc2dd93e7bc1, type: 2}
+  _playerModel: {fileID: 11400000, guid: 0af00f853f82ee84e94da3e3fa7e31a2, type: 2}
 --- !u!1 &1505280975096670108
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3294336194854534171}
   - component: {fileID: 5759080176046243175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CollisionRays
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9138872024756881393}
   - component: {fileID: 6127285084217333824}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}

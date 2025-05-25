@@ -23,7 +23,7 @@ namespace Bomberman.Level
 
         //todo move these to own models?
         public List<EnemyView> SpawnedEnemies { get; set; }
-        public List<DestructibleTile> SpawnedDestructibleTiles { get; set; }
+        public List<DestructibleTileView> SpawnedDestructibleTiles { get; set; }
 
         public List<EnemyCounter> Enemies => _enemies;
         public int DestructibleTileCount => _destructibleTileCount;
@@ -34,7 +34,7 @@ namespace Bomberman.Level
         {
             base.ResetAfterPlayInEditor();
             SpawnedEnemies = new List<EnemyView>();
-            SpawnedDestructibleTiles = new List<DestructibleTile>();
+            SpawnedDestructibleTiles = new List<DestructibleTileView>();
         }
     }
 }

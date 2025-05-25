@@ -4,11 +4,20 @@ using UnityEngine;
 
 namespace Bomberman.Level
 {
-    public class DestructibleTile : MonoBehaviour
+    public class WalkableTileModel
     {
-        public event Action<DestructibleTile> OnDestroyed;
+        public Action<WalkableTileModel> OnDestroyed;
+        public Vector2 Position { get; private set; }
+
+
+        public WalkableTileModel(Vector2 position)
+        {
+            Position = position;
+        }
 
         private PowerUp _powerUp;
+
+
         public PowerUp PowerUp
         {
             get => _powerUp;
@@ -25,7 +34,7 @@ namespace Bomberman.Level
                 }
             }
         }
-        
+
         private bool _isExit;
         public bool IsExit
         {
@@ -44,14 +53,18 @@ namespace Bomberman.Level
             }
         }
 
-        private void SpawnExit(DestructibleTile _)
+        public bool IsBlocked { get; set; }
+
+        private void SpawnExit(WalkableTileModel _)
         {
             //todo
         }
 
-        private void SpawnPowerUp(DestructibleTile _)
+        private void SpawnPowerUp(WalkableTileModel _)
         {
             //todo
         }
+
+        
     }
 }
