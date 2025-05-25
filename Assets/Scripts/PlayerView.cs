@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace Bomberman.Player
 {
-    public class PlayerView : Movable
+    public class PlayerView : MonoBehaviour
     {
         [SerializeField] private PlayerModel _playerModel;
         [SerializeField] private Animator _animator;
@@ -14,8 +14,12 @@ namespace Bomberman.Player
         [SerializeField] private InputActionReference _moveInput;
         
         [SerializeField] private InputActionReference _layBomb;
+        [SerializeField] private Movable _movable;
 
-        protected override float MoveSpeed => _playerModel.MoveSpeed;
+        private void Awake()
+        {
+            _movable.MoveSpeed = _playerModel.MoveSpeed;
+        }
 
         private Vector2 GetStrongestAxis(Vector2 input)
         {
@@ -27,14 +31,12 @@ namespace Bomberman.Player
                 : new Vector2(0f, Mathf.Sign(input.y));
         }
 
-        protected override void Update()
+        protected void Update()
         {
-            base.Update();
-            
-            if (_isStationary)
+            if (_movable.IsStationary)
             {
                 var strongestMovement = GetStrongestAxis(_moveInput.action.ReadValue<Vector2>());
-                _targetPosition += strongestMovement;
+                _movable.TargetPosition += strongestMovement;
             }
         }
     }

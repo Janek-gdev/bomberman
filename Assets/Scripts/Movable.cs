@@ -2,23 +2,23 @@
 
 namespace Bomberman.Player
 {
-    public abstract class Movable : MonoBehaviour
+    public class Movable : MonoBehaviour
     {
-        protected Vector2 _targetPosition;
-        protected bool _isStationary;
-        protected abstract float MoveSpeed { get; }
+        public Vector2 TargetPosition { get; set; }
+        public bool IsStationary { get; private set; }
+        public float MoveSpeed { get; set; }
         
-        protected virtual void Update()
+        private void Update()
         {
             transform.position =
-                Vector2.MoveTowards(transform.position, _targetPosition, Time.deltaTime * MoveSpeed);
+                Vector2.MoveTowards(transform.position, TargetPosition, Time.deltaTime * MoveSpeed);
 
-            _isStationary = IsAtDestination();
+            IsStationary = IsAtDestination();
         }
 
-        protected bool IsAtDestination()
+        public bool IsAtDestination()
         {
-            return (transform.position - (Vector3)_targetPosition).sqrMagnitude < 0.0001f;
+            return (transform.position - (Vector3)TargetPosition).sqrMagnitude < 0.0001f;
         }
     }
 }
