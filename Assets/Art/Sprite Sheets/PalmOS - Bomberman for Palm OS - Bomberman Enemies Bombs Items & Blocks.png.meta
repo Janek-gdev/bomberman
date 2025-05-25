@@ -1,0 +1,2223 @@
+fileFormatVersion: 2
+guid: 00e4e94d105a4ea49abf4d70fb50153f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 613
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40054bc444bc6f409ca56e52ea2124d
+      internalID: 1603658788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 613
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a097aca49704cbe4bb5699d0acc5d437
+      internalID: -440683394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 613
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8252cc18dd2ec2740a3b46bdd905b8dc
+      internalID: 1052218656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_3
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 583
+        width: 60
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4894170436bba394c814b261e1c6e0b9
+      internalID: -211935195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 621
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba6581ca9989ce4ebf4a5acbc5a2d33
+      internalID: 239102168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_5
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 621
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63d413c8d48a484198b505a4661675e
+      internalID: -1134151325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_6
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 621
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e2709bb785e434a8b1fb38537c2f9e
+      internalID: 1844116786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_7
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 621
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ceb0bd463e99748ac33abb3b4e67a6
+      internalID: 1499893202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 572
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753b3e9c68f009540807ab7a102773d5
+      internalID: -647714444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_9
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 572
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0ab0b312d7e09468577a7c40a8d5b4
+      internalID: -931109475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_10
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 572
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c61e29de6fc8a47bd91208a975c71e
+      internalID: 1177356501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 577
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c10b0bd94635224c8f7cd074f14ac5e
+      internalID: 1626841311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_12
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 577
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8c63b3ceb47db4f97c837257d70ac8
+      internalID: -1051452393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_13
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 577
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7833fc8b249404bb2fd0b1275885f0
+      internalID: 602325951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_14
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 577
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0116ec95c069d1f42820d19ec4d51a5a
+      internalID: -1244668262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_15
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 532
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d075719bf69e504797f69ecd3fbe7c4
+      internalID: -905670333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_16
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 534
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74686c9e4bd340041a6d987e150b8cfd
+      internalID: -1289462133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_17
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 532
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7fa20d57e589c42b9b326d7b439c4e
+      internalID: 1020515044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_18
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 532
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c841ab950d8a84daedcf3d0095a6cf
+      internalID: -1180793464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_19
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 532
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1a04afb007dac4da6999cbc6a57c35
+      internalID: -715053347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_20
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 532
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9abb02da4a55c154eb457577a136a448
+      internalID: -1831252099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_21
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 534
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3455544420c765d499560c3316f04ce8
+      internalID: -1085921223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_22
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 543
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9f3de3e706a7a48ae529c159d5342d
+      internalID: 1096946435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_24
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 554
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3686d689069a94386a899685fa9d06
+      internalID: -1164351533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_30
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 493
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d742a500c4a59c44e8f320b365100157
+      internalID: -163756347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_31
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 493
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3f522b1afdcd444b0a8d9f920279b0
+      internalID: 32786948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_32
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 493
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66a4418d26d5d745a1ec9268c9d415d
+      internalID: 992446965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_33
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 452
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f574e5177647374bac15b7b2cd789df
+      internalID: -464061714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_34
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 452
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84b6e5cd2cd5154e8654fd02a43ced6
+      internalID: -73089621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_35
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 452
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda73400d02d55942b6120836ec2c7a8
+      internalID: -713440994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_36
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 452
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69150ea236b02e8458d304ee07ef9dad
+      internalID: 1010336348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_37
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 455
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54c9f02abdd6b74d808cd0ca80f8133
+      internalID: -1592646531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_38
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 461
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f8b5e3ff31e3d4980bbce6ba1dc7ff
+      internalID: -530674358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_39
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 463
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cd60973e7131c469292018faea8c93
+      internalID: -604018846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_40
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 476
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef4962980ca79f64eaf0f9e4716f7e6f
+      internalID: 902779735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_44
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 418
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a48546463845a24aa5965c4d27e2ed4
+      internalID: -1441485677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_45
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 414
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c525e03157eca4fb1737339226eccf
+      internalID: -256810732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_46
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 413
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34b6f9ce13531f49a1334466b35c401
+      internalID: 538290646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_47
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 413
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4521ea9d7fb8a24cb96b77a6fd7a98c
+      internalID: -1602827858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_48
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 414
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e7918bd03e9da4f9e7ec817a5cb638
+      internalID: 1915104216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_49
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 414
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb39ecc435537e640bd499aad83f83e4
+      internalID: -581883584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_50
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 414
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73790c0fa57aa3b478365c7dee09d740
+      internalID: -439467780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_51
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 369
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53ccadb4b1f0004e81d9767b81618cd
+      internalID: -509072129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_52
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 369
+        width: 32
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e3a6d183503804a932f1ea94e6ca10
+      internalID: 672119692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_53
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 369
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7000909502e004699fc51356ba6709
+      internalID: 1857764096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_55
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 393
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedc32be0db41e84790778c670c5ebca
+      internalID: -1416548409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_59
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 381
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66d8b9771d6382459c2ece4fcf6f2cc
+      internalID: -2110979209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_64
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 326
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db69047d4be5ab48bcb293a9d38156a
+      internalID: 166218796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_65
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 327
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345ec248ce487c74b9505077e319cba0
+      internalID: -378209094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_66
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 327
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36ef04fa159e3a40948b0262299ce5d
+      internalID: -2035480855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_67
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 325
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25160374d9c3bf64092226388f6da8fe
+      internalID: -1020144409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_68
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 283
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50566770f8df39e499ce0226450a533e
+      internalID: -533713545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_69
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 283
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a91567a5bc99c47a1ee83d4737562b
+      internalID: -915617039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_70
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 283
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441f617695aae5b44942a6a0a1072801
+      internalID: 1814749475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_71
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 283
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa234211d5ad5d4e9563eae7986d86f
+      internalID: -1138378623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_72
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 241
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbedffd36bc0cd24cabbb49347cf87fc
+      internalID: 664105009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_73
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 240
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33431ed0eadb2fe4abfac843fed029d9
+      internalID: 843947964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_74
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 244
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdeff052d01904e4b8b9c680332f4988
+      internalID: -1769863843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_75
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 241
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e0e468dbf810e40895aa50352a1b45
+      internalID: 1997614608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_76
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 197
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079ec5b00d929084c847ab9869256979
+      internalID: -809000726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_77
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 197
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0786d889b27957342866c7d21bfbdf0c
+      internalID: -371667704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_78
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 197
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be71f709d17c47847bd7feb310dbc84c
+      internalID: 1256450008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_79
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 197
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ace1dea92498044b875566fed393272
+      internalID: -294072814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_80
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 150
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c9ccad1161a124f8450b2c827f8c2b
+      internalID: -2125664753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_81
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 150
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8b3d7cf9cfe7a4ca1872ac17b41981
+      internalID: 988745406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_82
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 150
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebf8db6f93c6ba41b29326d02263fee
+      internalID: -953566096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_83
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 150
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a0e9c15f1c337489edb8de5c14e991
+      internalID: 49164589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_84
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 109
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9362a5e2d2a81d745941a42145d95039
+      internalID: -724456243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_85
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 107
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90dc9254312b59d4dab26edd85040052
+      internalID: 553622527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_86
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 106
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fd3df80b67c6443849d8301aa70507
+      internalID: -918058967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_87
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 107
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a15f80a03bb3734f89bd10724f7e9fe
+      internalID: -1709296650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_88
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 62
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa60bb3de16db3458ff04fb2bbaeda0
+      internalID: -917195674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_89
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 60
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff83b6ad26bd0014292295d05a2b5024
+      internalID: -1712331866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_90
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 62
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac558bb6c2d728744867fa0af1cc8b8b
+      internalID: 1553452789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_91
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 60
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3323159981e79fe4f95651df3830fe57
+      internalID: 842261423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_92
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 18
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69963f4b1efd9e84087fbe966cd7bf97
+      internalID: 1048484497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_93
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 17
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3a49c50d2a77247b2b4c928846ceaf
+      internalID: 1180606409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_94
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 17
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d636c0f555bb6ee4db00766e3a65c1fb
+      internalID: -546552322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_95
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 16
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b320433101a114b42be5c266b804c4a1
+      internalID: -392954538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_23
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 393
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0680f938785b4d545b574d57f2070b54
+      internalID: 558740121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_25
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 381
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5af543fd9657e84c90eb59eb040b8a5
+      internalID: 82234601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_26
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 369
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117310471cfc0ba44a46418b7c898056
+      internalID: 1046864495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_27
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 534
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420cf77554e189d49ae222c4003e235f
+      internalID: -296009492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_28
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 554
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d700002a8b6ab594b89973b14226a5fc
+      internalID: -1253476051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_29
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 534
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31cd02a60e742e7499a435d6c89167d4
+      internalID: 1033518168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_41
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 534
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f48a7e5822691a4db8a8f49230001fd
+      internalID: 1882124774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_42
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 536
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b86b92e108b824eb7ccb72240fa1e6
+      internalID: 256883456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_43
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 536
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3727c26dfb984ad43b87122070d4b3ea
+      internalID: 1623030611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_54
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 476
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8fd137c6154d845a31e36d7efc2470
+      internalID: 764845988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_56
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 467
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5357de00abf7184697faf79a6957f5a
+      internalID: -1586072519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_57
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 467
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0608e4f63e678004f9e852817e7c0e9d
+      internalID: 1225162216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_58
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 381
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c4a7725578a5242957edc2271d7b36
+      internalID: -37823142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_60
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 381
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67bd0c876ff67549ac01f91c902e33b
+      internalID: 1156996503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_61
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 369
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056544a742c00db4a89f3ea52f0bce8f
+      internalID: -126252608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_62
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 369
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bf6c29db39b034294aa4d35130d3f3
+      internalID: 2044264724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_63
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 369
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e5587e9b97d544e8ca2d774574b6d5
+      internalID: 2059093369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3186022bc0513054bbe4b795a34cdc86
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_0: 1603658788
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_1: -440683394
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_10: 1177356501
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_11: 1626841311
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_12: -1051452393
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_13: 602325951
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_14: -1244668262
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_15: -905670333
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_16: -1289462133
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_17: 1020515044
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_18: -1180793464
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_19: -715053347
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_2: 1052218656
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_20: -1831252099
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_21: -1085921223
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_22: 1096946435
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_23: 558740121
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_24: -1164351533
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_25: 82234601
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_26: 1046864495
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_27: -296009492
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_28: -1253476051
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_29: 1033518168
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_3: -211935195
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_30: -163756347
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_31: 32786948
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_32: 992446965
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_33: -464061714
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_34: -73089621
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_35: -713440994
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_36: 1010336348
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_37: -1592646531
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_38: -530674358
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_39: -604018846
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_4: 239102168
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_40: 902779735
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_41: 1882124774
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_42: 256883456
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_43: 1623030611
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_44: -1441485677
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_45: -256810732
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_46: 538290646
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_47: -1602827858
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_48: 1915104216
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_49: -581883584
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_5: -1134151325
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_50: -439467780
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_51: -509072129
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_52: 672119692
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_53: 1857764096
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_54: 764845988
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_55: -1416548409
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_56: -1586072519
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_57: 1225162216
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_58: -37823142
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_59: -2110979209
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_6: 1844116786
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_60: 1156996503
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_61: -126252608
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_62: 2044264724
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_63: 2059093369
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_64: 166218796
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_65: -378209094
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_66: -2035480855
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_67: -1020144409
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_68: -533713545
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_69: -915617039
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_7: 1499893202
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_70: 1814749475
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_71: -1138378623
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_72: 664105009
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_73: 843947964
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_74: -1769863843
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_75: 1997614608
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_76: -809000726
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_77: -371667704
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_78: 1256450008
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_79: -294072814
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_8: -647714444
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_80: -2125664753
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_81: 988745406
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_82: -953566096
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_83: 49164589
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_84: -724456243
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_85: 553622527
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_86: -918058967
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_87: -1709296650
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_88: -917195674
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_89: -1712331866
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_9: -931109475
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_90: 1553452789
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_91: 842261423
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_92: 1048484497
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_93: 1180606409
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_94: -546552322
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_95: -392954538
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
