@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -19,9 +18,17 @@ namespace Bomberman.UI
             _startInput.action.performed -= StartGame;
         }
 
-        private void StartGame(InputAction.CallbackContext obj)
+        private void StartGame(InputAction.CallbackContext _)
         {
+            Fader.Instance.OnFadeComplete += LoadGameScene;
+            Fader.Instance.FadeOut(1);
+        }
+
+        private void LoadGameScene()
+        {
+            Fader.Instance.OnFadeComplete -= LoadGameScene;
             SceneManager.LoadScene("GameScene");
+            Fader.Instance.FadeIn(1);
         }
     }
 }
