@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Bomberman.Collisions;
 using Bomberman.Enemies;
 using Bomberman.Player;
 using Bomberman.Pooling;
@@ -8,10 +7,6 @@ using UnityEngine;
 
 namespace Bomberman.Level
 {
-    public class ExitDoor : MonoBehaviour
-    {
-        
-    }
     [CreateAssetMenu(menuName = MenuName.LevelLayout + nameof(LevelPrefabsModel), fileName = nameof(LevelPrefabsModel))]
     public class LevelPrefabsModel : ScriptableObject
     {
@@ -24,7 +19,7 @@ namespace Bomberman.Level
         
         [SerializeField] private DestructibleTilePool _destructiblePool;
         [SerializeField] private List<EnemyPrefab> _enemyPrefabs;
-        [SerializeField] private GameObject _exitDoor;
+        [SerializeField] private ExitDoor _exitDoor;
         [SerializeField] private GameObject _playerRig;
         [SerializeField] private GameObject _blockerTile;
         [SerializeField] private GameObject _walkableTile;
@@ -33,7 +28,7 @@ namespace Bomberman.Level
         
 
         public GameObject PlayerRig => _playerRig;
-        public GameObject ExitDoor => _exitDoor;
+        public ExitDoor ExitDoor => _exitDoor;
         public List<EnemyPrefab> EnemyPrefabs => _enemyPrefabs;
         public DestructibleTilePool DestructibleTilePool => _destructiblePool;
     }

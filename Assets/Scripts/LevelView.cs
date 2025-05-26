@@ -17,6 +17,7 @@ namespace Bomberman.Level
         private const int ExitIndex = 1;
         private const int PlayerStartingTilesAllocation = 3;
         private GameObject _player;
+        private List<GameObject> _additionalSpawnedObjects = new();
 
         private void OnEnable()
         {
@@ -83,15 +84,23 @@ namespace Bomberman.Level
                 destructibleTile.name = $"Destructible tile {shuffledTiles[i].Position.x}/{shuffledTiles[i].Position.y}";
                 destructibleTile.TileModel = shuffledTiles[i];
                 destructibleTile.TileModel.IsBlocked = true;
-                destructibleTile.OnTileDestroyed += OnTileDestroyed;
+                destructibleTile.OnTileDestroyed += HandleTileDestruction;
                 _levelModel.SpawnedDestructibleTiles.Add(destructibleTile);
             }
         }
 
-        private void OnTileDestroyed(DestructibleTileView destroyedTile)
+        private void HandleTileDestruction(DestructibleTileView destroyedTile)
         {
-            destroyedTile.OnTileDestroyed -= OnTileDestroyed;
+            destroyedTile.OnTileDestroyed -= HandleTileDestruction;
             _levelModel.SpawnedDestructibleTiles.Remove(destroyedTile);
+            if (destroyedTile.TileModel.IsExit)
+            {
+                Debug.Log("Exit found!");
+                var exitDoor = Instantiate(_levelModel.Prefabs.ExitDoor, destroyedTile.TileModel.Position,
+                    Quaternion.identity, transform);
+                exitDoor.Initialize(_levelModel);
+                _additionalSpawnedObjects.Add(exitDoor.gameObject);
+            }
             //todo exit/power up spawning
         }
 
@@ -104,13 +113,20 @@ namespace Bomberman.Level
                 {
                     var spawnedEnemy = _levelModel.Prefabs.EnemyPrefabs.First(x => x.EnemyModel == enemyCounter._enemyModel).Pool.Spawn(shuffledTiles[i].Position,
                         Quaternion.identity, transform);
+                    spawnedEnemy.OnEnemyDestroyed += HandleEnemyDestruction;
                     _levelModel.SpawnedEnemies.Add(spawnedEnemy);
                 }
 
                 freeTileIndex += enemyCounter.Amount;
             }
         }
-        
+
+        private void HandleEnemyDestruction(EnemyView destroyedEnemy)
+        {
+            destroyedEnemy.OnEnemyDestroyed -= HandleEnemyDestruction;
+            _levelModel.SpawnedEnemies.Remove(destroyedEnemy);
+        }
+
         private void SpawnPlayer()
         {
             var playerRig = Instantiate(_levelModel.Prefabs.PlayerRig, Vector2.zero, Quaternion.identity);
@@ -147,8 +163,14 @@ namespace Bomberman.Level
                 Destroy(spawnedEnemy.gameObject);
             }
 
+            foreach (var additionalSpawnedObject in _additionalSpawnedObjects)
+            {
+                Destroy(additionalSpawnedObject);
+            }
+
             _levelModel.SpawnedDestructibleTiles = new List<DestructibleTileView>();
             _levelModel.SpawnedEnemies = new List<EnemyView>();
+            _additionalSpawnedObjects = new List<GameObject>();
         }
     }
 }

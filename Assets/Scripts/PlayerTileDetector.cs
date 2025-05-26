@@ -8,7 +8,7 @@ namespace Bomberman.Collisions
     public class PlayerTileDetector : MonoBehaviour
     {
         public event Action<bool> OnPlayerIsOnTileChanged;
-        [SerializeField] private bool _playerIsOnTile;
+        private bool _playerIsOnTile;
         public bool PlayerIsOnTile
         {
             get => _playerIsOnTile;
