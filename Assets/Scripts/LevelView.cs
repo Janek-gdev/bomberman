@@ -18,7 +18,7 @@ namespace Bomberman.Level
         private const int PlayerStartingTilesAllocation = 3;
         private GameObject _player;
         private List<GameObject> _additionalSpawnedObjects = new();
-
+        
         private void OnEnable()
         {
             GameEvents.instance.OnLevelTeardown += TearDownLevel;

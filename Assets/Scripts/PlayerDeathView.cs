@@ -8,6 +8,7 @@ namespace Bomberman.Player
     public class PlayerDeathView : MonoBehaviour, IBombable
     {
         [SerializeField] private PlayerModel _playerModel;
+        [SerializeField] private PlayerPowerUpModel _playerPowerUpModel;
 
         private void OnEnable()
         {
@@ -43,6 +44,7 @@ namespace Bomberman.Player
         {
             //todo animation event
             yield return new WaitForSeconds(0.3f);
+            _playerPowerUpModel.RemoveAllPowerUps();
             GameEvents.instance.OnPlayerDeath?.Invoke();
         }
 

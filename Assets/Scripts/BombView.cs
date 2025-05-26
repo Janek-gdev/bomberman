@@ -83,6 +83,7 @@ namespace Bomberman.Bombing
                     for (int j = 0; j < hits; j++)
                     {
                         _raycastResults[j].transform.GetComponent<IBombable>()?.GetBombed();
+                        return;
                     }
                 }
             }

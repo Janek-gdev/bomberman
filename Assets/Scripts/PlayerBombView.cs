@@ -26,13 +26,14 @@ namespace Bomberman.Player
         private void OnDisable()
         {
             _layBomb.action.performed -= OnLayBombPerformed;
+            GameEvents.instance.OnLevelTeardown -= RemoveBombs;
         }
 
         private void RemoveBombs()
         {
             foreach (var laidBomb in _laidBombs)
             {
-                Destroy(laidBomb);
+                Destroy(laidBomb.gameObject);
             }
 
             _laidBombs = new List<BombView>();

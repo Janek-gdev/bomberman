@@ -61,5 +61,42 @@ namespace Bomberman.Player
             base.ResetAfterPlayInEditor();
             _powerUps = new List<PowerUp>();
         }
+
+        public void RemoveAllPowerUps()
+        {
+            foreach (var powerUp in _powerUps)
+            {
+                RemovePowerUp(powerUp);
+            }
+        }
+
+        public void RemovePowerUp(PowerUp powerUp)
+        {
+            switch (powerUp)
+            {
+                case PowerUp.None:
+                    break;
+                case PowerUp.BombUp:
+                    _playerModel.MaxBombAllowance--;
+                    break;
+                case PowerUp.RangeUp:
+                    _playerBombModel.ExplosionRange--;
+                    break;
+                case PowerUp.SpeedUp:
+                    _playerModel.MoveSpeed -= _moveSpeedIncrementPerPowerUp;
+                    break;
+                case PowerUp.WallPass:
+                    _playerModel.NonWalkableLayerMask |= (1 << _destructibleLayer);
+                    break;
+                case PowerUp.BombPass:
+                    _playerModel.NonWalkableLayerMask |= (1 << _bombLayer);
+                    break;
+                case PowerUp.Fireproof:
+                    _playerBombModel.BombableLayerMask |= (1 << _playerLayer);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(powerUp), powerUp, null);
+            }
+        }
     }
 }
