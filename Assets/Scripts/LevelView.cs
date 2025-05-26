@@ -119,7 +119,7 @@ namespace Bomberman.Level
             {
                 for (int i = freeTileIndex; i < freeTileIndex + enemyCounter.Amount; i++)
                 {
-                    var spawnedEnemy = _levelModel.Prefabs.EnemyPrefabs.First(x => x.EnemyModel == enemyCounter._enemyModel).Pool.Spawn(shuffledTiles[i].Position,
+                    var spawnedEnemy = Instantiate(_levelModel.Prefabs.EnemyPrefabs.First(x => x.EnemyModel == enemyCounter._enemyModel).Prefab, shuffledTiles[i].Position,
                         Quaternion.identity, transform);
                     spawnedEnemy.OnEnemyDestroyed += HandleEnemyDestruction;
                     _levelModel.SpawnedEnemies.Add(spawnedEnemy);

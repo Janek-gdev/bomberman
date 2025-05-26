@@ -1,19 +1,23 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Bomberman.Player
 {
     public class TileMovable : MonoBehaviour
     {
-        public Vector2 TargetPosition { get; set; }
-        public bool IsStationary { get; private set; }
+        public Vector2 TargetPosition { get; set; } 
+
         public float MoveSpeed { get; set; }
-        
+
+        private void Awake()
+        {
+            TargetPosition = transform.position;
+        }
+
         private void Update()
         {
             transform.position =
                 Vector2.MoveTowards(transform.position, TargetPosition, Time.deltaTime * MoveSpeed);
-
-            IsStationary = IsAtDestination();
         }
 
         public bool IsAtDestination()

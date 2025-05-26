@@ -14,7 +14,7 @@ namespace Bomberman.Level
         public class EnemyPrefab
         {
             public EnemyModel EnemyModel;
-            public EnemyPool Pool;
+            public EnemyView Prefab;
         }
 
         [Serializable]
