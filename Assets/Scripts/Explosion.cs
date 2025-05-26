@@ -13,12 +13,12 @@ namespace Bomberman.Player
 
         private void OnEnable()
         {
-            GameEvents.instance.OnLevelReloadBegin += Cleanup;
+            GameEvents.instance.OnLevelTeardown += Cleanup;
         }
 
         private void OnDisable()
         {
-            GameEvents.instance.OnLevelReloadBegin -= Cleanup;
+            GameEvents.instance.OnLevelTeardown -= Cleanup;
         }
 
         private void Cleanup()

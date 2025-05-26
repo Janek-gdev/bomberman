@@ -175,6 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729755385}
   - component: {fileID: 1729755384}
+  - component: {fileID: 1729755386}
   m_Layer: 0
   m_Name: LevelView
   m_TagString: Untagged
@@ -194,7 +195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e325d5336eb43498623572392fb1a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelModel: {fileID: 11400000, guid: b80824341e7c8d440b2667971910df62, type: 2}
 --- !u!4 &1729755385
 Transform:
   m_ObjectHideFlags: 0
@@ -210,6 +210,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1729755386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729755383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992ee7ef3b34317845979e361f05162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelView: {fileID: 1729755384}
+  _levelModels:
+  - {fileID: 11400000, guid: b80824341e7c8d440b2667971910df62, type: 2}
+  - {fileID: 11400000, guid: f6dd1bc39c071ac469483cb717088b03, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

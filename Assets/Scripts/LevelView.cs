@@ -12,30 +12,39 @@ namespace Bomberman.Level
 {
     public class LevelView : MonoBehaviour
     {
-        [SerializeField] private LevelModel _levelModel;
+        private LevelModel _levelModel;
         private const int PowerUpIndex = 0;
         private const int ExitIndex = 1;
+        private const int PlayerStartingTilesAllocation = 3;
+        private GameObject _player;
+
         private void OnEnable()
         {
-            SpawnPlayer();
-            GenerateLevel();
-            GameEvents.instance.OnLevelReloadBegin += TearDownLevel;
-            GameEvents.instance.OnLevelReloadEnd += GenerateLevel;
-            GameEvents.instance.OnLevelReloadEnd += MovePlayerToStart;
+            GameEvents.instance.OnLevelTeardown += TearDownLevel;
         }
 
         private void OnDisable()
         {
-            GameEvents.instance.OnLevelReloadBegin -= TearDownLevel;
-            GameEvents.instance.OnLevelReloadEnd -= GenerateLevel;
-            GameEvents.instance.OnLevelReloadEnd -= MovePlayerToStart;
+            GameEvents.instance.OnLevelTeardown -= TearDownLevel;
+        }
+
+        public void LoadLevel(LevelModel levelModel)
+        {
+            Debug.Log($"Loading level {levelModel.name}");
+            _levelModel = levelModel;
+            GenerateLevel();
+            if (_player == null)
+            {
+                SpawnPlayer();
+            }
+            MovePlayerToStart();
         }
 
         private void GenerateLevel()
         {
             var walkableTiles = LevelLayoutGeneratorModel.instance.WalkableTiles;
             
-            Assert.IsTrue(_levelModel.DestructibleTileCount < walkableTiles.Count);
+            Assert.IsTrue(_levelModel.DestructibleTileCount < walkableTiles.Count - PlayerStartingTilesAllocation);
 
             var shuffledFreeCoords = GetShuffledTiles(walkableTiles);
 
@@ -51,7 +60,7 @@ namespace Bomberman.Level
         private static List<WalkableTileModel> GetShuffledTiles(List<WalkableTileModel> walkableTiles)
         {
             var shuffledTiles = new List<WalkableTileModel>(walkableTiles.Where(x => x != null));
-            //Remove top left corner so we can spawn the player there
+            //Remove bottom right corner so we can spawn the player there
             shuffledTiles.RemoveAll(tile =>
                 (tile.Position.x == 0 && tile.Position.y == 0) ||
                 (tile.Position.x == 1 && tile.Position.y == 0) ||
@@ -74,8 +83,16 @@ namespace Bomberman.Level
                 destructibleTile.name = $"Destructible tile {shuffledTiles[i].Position.x}/{shuffledTiles[i].Position.y}";
                 destructibleTile.TileModel = shuffledTiles[i];
                 destructibleTile.TileModel.IsBlocked = true;
+                destructibleTile.OnTileDestroyed += OnTileDestroyed;
                 _levelModel.SpawnedDestructibleTiles.Add(destructibleTile);
             }
+        }
+
+        private void OnTileDestroyed(DestructibleTileView destroyedTile)
+        {
+            destroyedTile.OnTileDestroyed -= OnTileDestroyed;
+            _levelModel.SpawnedDestructibleTiles.Remove(destroyedTile);
+            //todo exit/power up spawning
         }
 
         private void SpawnEnemies(List<WalkableTileModel> shuffledTiles, int freeTileStartingIndex)
@@ -96,7 +113,8 @@ namespace Bomberman.Level
         
         private void SpawnPlayer()
         {
-            _levelModel.Player = Instantiate(_levelModel.Prefabs.PlayerRig, Vector2.zero, Quaternion.identity);
+            var playerRig = Instantiate(_levelModel.Prefabs.PlayerRig, Vector2.zero, Quaternion.identity);
+            _player = playerRig.GetComponentInChildren<PlayerMovementView>().gameObject;
         }
 
         private void SpawnPowerUp()
@@ -113,7 +131,7 @@ namespace Bomberman.Level
 
         private void MovePlayerToStart()
         {
-            _levelModel.Player.transform.position = Vector2.zero;
+            _player.transform.position = Vector2.zero;
         }
 
         private void TearDownLevel()

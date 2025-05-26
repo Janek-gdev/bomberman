@@ -8,6 +8,10 @@ using UnityEngine;
 
 namespace Bomberman.Level
 {
+    public class ExitDoor : MonoBehaviour
+    {
+        
+    }
     [CreateAssetMenu(menuName = MenuName.LevelLayout + nameof(LevelPrefabsModel), fileName = nameof(LevelPrefabsModel))]
     public class LevelPrefabsModel : ScriptableObject
     {

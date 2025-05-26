@@ -16,7 +16,6 @@ namespace Bomberman.Level
             public int Amount;
         }
         
-        public GameObject Player { get; set; }
         
         [SerializeField] private List<EnemyCounter> _enemies;
         [SerializeField, Min(2)] private int _destructibleTileCount;

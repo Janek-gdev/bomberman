@@ -20,7 +20,7 @@ namespace Bomberman.Player
         private void OnEnable()
         {
             _layBomb.action.performed += OnLayBombPerformed;
-            GameEvents.instance.OnLevelReloadBegin += RemoveBombs;
+            GameEvents.instance.OnLevelTeardown += RemoveBombs;
         }
 
         private void OnDisable()
