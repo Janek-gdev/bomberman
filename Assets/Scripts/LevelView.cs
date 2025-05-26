@@ -98,10 +98,18 @@ namespace Bomberman.Level
                 Debug.Log("Exit found!");
                 var exitDoor = Instantiate(_levelModel.Prefabs.ExitDoor, destroyedTile.TileModel.Position,
                     Quaternion.identity, transform);
-                exitDoor.Initialize(_levelModel);
+                exitDoor.Initialize(_levelModel, destroyedTile.TileModel);
                 _additionalSpawnedObjects.Add(exitDoor.gameObject);
             }
-            //todo exit/power up spawning
+            else if (destroyedTile.TileModel.PowerUp != PowerUp.None)
+            {
+                Debug.Log("Power up found!");
+                var powerUpPickup = Instantiate(_levelModel.Prefabs.PowerUpPrefabs.First(x => x.PowerUp == destroyedTile.TileModel.PowerUp).PowerUpPickup, 
+                    destroyedTile.TileModel.Position,
+                    Quaternion.identity, transform);
+                powerUpPickup.Initialize(destroyedTile.TileModel.PowerUp);
+                _additionalSpawnedObjects.Add(powerUpPickup.gameObject);
+            }
         }
 
         private void SpawnEnemies(List<WalkableTileModel> shuffledTiles, int freeTileStartingIndex)

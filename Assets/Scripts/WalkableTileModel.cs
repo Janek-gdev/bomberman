@@ -15,61 +15,15 @@ namespace Bomberman.Level
             Position = position;
         }
 
-        private PowerUp _powerUp;
+        public PowerUp PowerUp { get; set; }
 
-
-        public PowerUp PowerUp
-        {
-            get => _powerUp;
-            set
-            {
-                _powerUp = value;
-                if (_powerUp != PowerUp.None)
-                {
-                    OnDestroyed += SpawnPowerUp;
-                }
-                else
-                {
-                    OnDestroyed -= SpawnPowerUp;
-                }
-            }
-        }
-
-        private bool _isExit;
-        public bool IsExit
-        {
-            get => _isExit;
-            set
-            {
-                _isExit = value;
-                if (_isExit)
-                {
-                    OnDestroyed += SpawnExit;
-                }
-                else
-                {
-                    OnDestroyed -= SpawnExit;
-                }
-            }
-        }
-
+        public bool IsExit { get; set; }
         public bool IsBlocked { get; set; }
-
-        private void SpawnExit(WalkableTileModel _)
-        {
-            //todo
-        }
-
-        private void SpawnPowerUp(WalkableTileModel _)
-        {
-            //todo
-        }
-
 
         public void Reset()
         {
-            _isExit = false;
-            _powerUp = PowerUp.None;
+            IsExit = false;
+            PowerUp = PowerUp.None;
             IsBlocked = false;
         }
     }

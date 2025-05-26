@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5857c3038476449a9b05b1079e922269, type: 3}
+  m_Name: PlayerPowerUpModel
+  m_EditorClassIdentifier: 
+  _playerModel: {fileID: 11400000, guid: 0af00f853f82ee84e94da3e3fa7e31a2, type: 2}
+  _playerBombModel: {fileID: 11400000, guid: a67cbc8cd50ff984088efcad65d83ae1, type: 2}
+  _moveSpeedIncrementPerPowerUp: 1
+  _bombLayer: 9
+  _destructibleLayer: 7
+  _playerLayer: 8

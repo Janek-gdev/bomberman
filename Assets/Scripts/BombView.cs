@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Bomberman.Collisions;
 using Bomberman.Level;
 using Bomberman.Player;
 using Bomberman.Utility;
@@ -10,7 +11,7 @@ namespace Bomberman.Bombing
 {
     public class BombView : MonoBehaviour, IBombable
     {
-        [SerializeField] private LayerMask _explosionStoppingLayers;
+        [SerializeField] private PlayerTileDetector _playerTileDetector;
         [SerializeField] private Explosion _centralExplosionPrefab;
         [SerializeField] private Explosion _connectorExplosionPrefab;
         [SerializeField] private Explosion _endExplosionPrefab;
@@ -28,6 +29,16 @@ namespace Bomberman.Bombing
             _bombModel = bombModel;
             Tile.IsBlocked = true;
             _explosionTimer = StartCoroutine(StartCountdown());
+            _playerTileDetector.OnPlayerIsOnTileChanged += OnPlayerIsOnTileChanged;
+        }
+
+        private void OnPlayerIsOnTileChanged(bool _)
+        {
+            if (!_playerTileDetector.PlayerIsOnTile)
+            {
+                gameObject.layer = _bombModel.PlayerWalkedOffLayer;
+                _playerTileDetector.OnPlayerIsOnTileChanged -= OnPlayerIsOnTileChanged;
+            }
         }
 
         private IEnumerator StartCountdown()
@@ -61,7 +72,7 @@ namespace Bomberman.Bombing
             var rotation = DirectionUtility.GetRotationFromDirection(direction);
             for (int i = 1; i < _bombModel.ExplosionRange + 1; i++)
             {
-                var hits = Physics2D.RaycastNonAlloc(transform.position, directionVector, _raycastResults, 1f * i, _explosionStoppingLayers);
+                var hits = Physics2D.RaycastNonAlloc(transform.position, directionVector, _raycastResults, 1f * i, _bombModel.ExplosionStoppingLayers);
                 if (hits == 0)
                 {
                     explosions.Add(Instantiate(i == _bombModel.ExplosionRange ? _endExplosionPrefab : _connectorExplosionPrefab,

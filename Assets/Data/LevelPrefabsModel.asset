@@ -16,7 +16,20 @@ MonoBehaviour:
   _enemyPrefabs:
   - EnemyModel: {fileID: 11400000, guid: de352d8bdc72a9b46962c2d8369efd0d, type: 2}
     Pool: {fileID: 11400000, guid: b7cffe09fbdedea48b318fefb997bd24, type: 2}
-  _exitDoor: {fileID: 0}
+  _exitDoor: {fileID: 7813229102102895243, guid: 82f3827b7d4f55a4ca924c28ae08039d, type: 3}
   _playerRig: {fileID: 2710498050057431178, guid: e62d0af29540dca4ba2dae4b4370b7f6, type: 3}
   _blockerTile: {fileID: 6696683332767228150, guid: 8477d45b34357e941bac97caac203f28, type: 3}
   _walkableTile: {fileID: 6696683332767228150, guid: 5735960ed58d1cf448f7e272cc96caff, type: 3}
+  _powerUpPrefabs:
+  - PowerUpPickup: {fileID: 2872691585259032192, guid: 6ef2bd59f9ba28b4d99ed64f8990ae74, type: 3}
+    PowerUp: 1
+  - PowerUpPickup: {fileID: 2872691585259032192, guid: 61912b14a919a2f48ae556d8d32ebfc4, type: 3}
+    PowerUp: 2
+  - PowerUpPickup: {fileID: 2872691585259032192, guid: 97a25055d736bff4d98aebb4f84236cb, type: 3}
+    PowerUp: 3
+  - PowerUpPickup: {fileID: 2872691585259032192, guid: a20e60b99b4e1d54f87d90f826b86e03, type: 3}
+    PowerUp: 4
+  - PowerUpPickup: {fileID: 2872691585259032192, guid: c5321ba41c3f9c94787cd784095ae64b, type: 3}
+    PowerUp: 5
+  - PowerUpPickup: {fileID: 2872691585259032192, guid: 49506213e60833f4b827dae9460968fb, type: 3}
+    PowerUp: 6

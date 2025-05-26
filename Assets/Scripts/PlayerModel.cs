@@ -7,6 +7,21 @@ namespace Bomberman.Player
     [CreateAssetMenu(menuName = MenuName.Player + nameof(PlayerModel), fileName = nameof(PlayerModel))]
     public class PlayerModel : ResettableScriptableObject
     {
+        public event Action<LayerMask> OnNonWalkableLayerMaskChanged;
+        private LayerMask _nonWalkableLayerMask;
+        public LayerMask NonWalkableLayerMask
+        {
+            get => _nonWalkableLayerMask;
+            set
+            {
+                if (value != _nonWalkableLayerMask)
+                {
+                    _nonWalkableLayerMask = value;
+                    OnNonWalkableLayerMaskChanged?.Invoke(_nonWalkableLayerMask);
+                }
+            }
+        }
+        
         public event Action<bool> OnIsAliveChanged;
         [SerializeField] private bool _isAlive;
         public bool IsAlive
@@ -22,9 +37,21 @@ namespace Bomberman.Player
             }
         }
         
-        [SerializeField] private float _moveSpeed = 1;
+        [SerializeField] private float _baseMoveSpeed = 4f;
+        private float _moveSpeed;
 
-        public float MoveSpeed => _moveSpeed;
+        public float MoveSpeed
+        {
+            get
+            {
+                if (_moveSpeed == 0)
+                {
+                    _moveSpeed = _baseMoveSpeed;
+                }
+                return _moveSpeed;
+            }
+            set => _moveSpeed = value;
+        }
 
         [SerializeField] private float _gridCorrectionSpeed;
         public float GridCorrectionSpeed => _gridCorrectionSpeed;
@@ -67,6 +94,7 @@ namespace Bomberman.Player
             MaxBombAllowance = _baseMaxBombAllowance;
             _currentTile = null;
             IsAlive = true;
+            _moveSpeed = _baseMoveSpeed;
         }
         
     }

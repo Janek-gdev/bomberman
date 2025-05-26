@@ -8,6 +8,13 @@ namespace Bomberman.Collisions
     public class CollisionDetector : MonoBehaviour
     {
         [SerializeField] private LayerMask _nonWalkableLayerMask;
+
+        public LayerMask NonWalkableLayerMask
+        {
+            get => _nonWalkableLayerMask;
+            set => _nonWalkableLayerMask = value;
+        }
+        
         [SerializeField] private float _raycastDistance = 1f;
         private readonly RaycastHit2D[] _raycastResults = new RaycastHit2D[10];
 

@@ -34,7 +34,7 @@ namespace Bomberman.Player
 
         private void Update()
         {
-            var hits = Physics2D.BoxCastNonAlloc(transform.position, new Vector2(0.5f, 0.5f), 0, Vector2.zero, _raycastResults);
+            var hits = Physics2D.BoxCastNonAlloc(transform.position, new Vector2(0.5f, 0.5f), 0, Vector2.zero, _raycastResults, 0, _bombModel.BombableLayerMask);
             for (int i = 0; i < hits; i++)
             {
                 _raycastResults[i].transform.GetComponent<IBombable>()?.GetBombed();

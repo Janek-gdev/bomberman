@@ -16,6 +16,13 @@ namespace Bomberman.Level
             public EnemyModel EnemyModel;
             public EnemyPool Pool;
         }
+
+        [Serializable]
+        public class PowerUpPrefab
+        {
+            public PowerUpPickup PowerUpPickup;
+            public PowerUp PowerUp;
+        }
         
         [SerializeField] private DestructibleTilePool _destructiblePool;
         [SerializeField] private List<EnemyPrefab> _enemyPrefabs;
@@ -23,6 +30,7 @@ namespace Bomberman.Level
         [SerializeField] private GameObject _playerRig;
         [SerializeField] private GameObject _blockerTile;
         [SerializeField] private GameObject _walkableTile;
+        [SerializeField] private List<PowerUpPrefab> _powerUpPrefabs;
         public GameObject BlockerTile => _blockerTile;
         public GameObject WalkableTile => _walkableTile;
         
@@ -31,5 +39,6 @@ namespace Bomberman.Level
         public ExitDoor ExitDoor => _exitDoor;
         public List<EnemyPrefab> EnemyPrefabs => _enemyPrefabs;
         public DestructibleTilePool DestructibleTilePool => _destructiblePool;
+        public List<PowerUpPrefab> PowerUpPrefabs => _powerUpPrefabs;
     }
 }

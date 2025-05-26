@@ -31,6 +31,7 @@ namespace Bomberman.Collisions
 
         private void OnEnable()
         {
+            OnPlayerTileChanged(_playerModel.CurrentTile);
             _playerModel.OnCurrentTileChanged += OnPlayerTileChanged;
         }
 

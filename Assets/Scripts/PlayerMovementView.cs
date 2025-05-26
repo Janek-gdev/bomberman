@@ -15,6 +15,22 @@ namespace Bomberman.Player
         
         [SerializeField] private InputActionReference _moveInput;
 
+        private void OnEnable()
+        {
+            _playerModel.NonWalkableLayerMask = _collisionDetector.NonWalkableLayerMask;
+            _playerModel.OnNonWalkableLayerMaskChanged += UpdateNonWalkableLayerMask;
+        }
+
+        private void OnDisable()
+        {
+            _playerModel.OnNonWalkableLayerMaskChanged -= UpdateNonWalkableLayerMask;
+        }
+
+        private void UpdateNonWalkableLayerMask(LayerMask _)
+        {
+            _collisionDetector.NonWalkableLayerMask = _playerModel.NonWalkableLayerMask;
+        }
+
         protected void Update()
         {
             if (!_playerModel.IsAlive)

@@ -1,13 +1,14 @@
 ﻿using Bomberman.Collisions;
-using Bomberman.Utility;
+using Bomberman.Player;
 using UnityEngine;
 
 namespace Bomberman.Level
 {
-    public class ExitDoor : MonoBehaviour
+    public class PowerUpPickup : MonoBehaviour
     {
+        [SerializeField] private PlayerPowerUpModel _playerPowerUp;
         [SerializeField] private PlayerTileDetector _playerTileDetector;
-        private LevelModel _levelModel;
+        private PowerUp _powerUp;
         private void OnEnable()
         {
             _playerTileDetector.OnPlayerIsOnTileChanged += OnPlayerEntersTile;
@@ -18,18 +19,15 @@ namespace Bomberman.Level
             _playerTileDetector.OnPlayerIsOnTileChanged -= OnPlayerEntersTile;
         }
 
-        public void Initialize(LevelModel levelModel, WalkableTileModel walkableTileModel)
+        public void Initialize(PowerUp powerUp)
         {
-            _levelModel = levelModel;
-            walkableTileModel.IsBlocked = true;
+            _powerUp = powerUp;
         }
 
         private void OnPlayerEntersTile(bool obj)
         {
-            if (_levelModel.SpawnedEnemies.Count == 0)
-            {
-                GameEvents.instance.OnLevelComplete?.Invoke();
-            }
+            _playerPowerUp.Add(_powerUp);
+            Destroy(gameObject);
         }
     }
 }

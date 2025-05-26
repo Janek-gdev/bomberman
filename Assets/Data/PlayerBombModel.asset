@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7bcaff00d864b4487090cb9e31e622c, type: 3}
   m_Name: PlayerBombModel
   m_EditorClassIdentifier: 
+  _playerWalkedOffLayer: 9
+  _explosionStoppingLayers:
+    serializedVersion: 2
+    m_Bits: 192
+  _baseBombableLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
   _explosionDuration: 0.5
-  _timeToExplode: 1
+  _timeToExplode: 2.5
   _baseExplosionRange: 1
