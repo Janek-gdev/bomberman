@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerModel: {fileID: 11400000, guid: 0af00f853f82ee84e94da3e3fa7e31a2, type: 2}
+  _playerPowerUpModel: {fileID: 11400000, guid: e2e522a7cfffb754e9d10f869819eb94, type: 2}
 --- !u!1 &1505280975096670108
 GameObject:
   m_ObjectHideFlags: 0

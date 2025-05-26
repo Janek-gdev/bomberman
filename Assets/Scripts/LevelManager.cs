@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Bomberman.UI;
 using Bomberman.Utility;
 using UnityEngine;
 
@@ -36,21 +37,30 @@ namespace Bomberman.Level
         private void LoadFirstLevel()
         {
             _currentLevelIndex = 0;
-            LoadCurrentLevel();
+            BeginCurrentLevelLoadSequence();
         }
 
         [ContextMenu("Load next level")]
         private void LoadNextLevel()
         {
             _currentLevelIndex++;
-            LoadCurrentLevel();
+            BeginCurrentLevelLoadSequence();
         }
 
-        private void LoadCurrentLevel()
+        private void BeginCurrentLevelLoadSequence()
         {
+            Fader.Instance.OnFadeComplete += LoadLevel;
+            Fader.Instance.FadeOut();
+            
+        }
+
+        private void LoadLevel()
+        {
+            Fader.Instance.OnFadeComplete -= LoadLevel;
             GameEvents.instance.OnLevelTeardown?.Invoke();
             _levelView.LoadLevel(_levelModels[_currentLevelIndex]);
             GameEvents.instance.OnLevelSetupComplete?.Invoke();
+            Fader.Instance.FadeIn();
         }
     }
 }
