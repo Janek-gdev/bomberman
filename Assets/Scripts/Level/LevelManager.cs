@@ -5,11 +5,13 @@ using Bomberman.Scoring;
 using Bomberman.Timing;
 using Bomberman.UI;
 using Bomberman.Utility;
-using TMPro;
 using UnityEngine;
 
 namespace Bomberman.Level
 {
+    /// <summary>
+    /// Handles the transition between levels and level resetting
+    /// </summary>
     public class LevelManager : MonoBehaviour
     {
         [SerializeField] private LivesModel _livesModel;

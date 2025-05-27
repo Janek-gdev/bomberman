@@ -1,10 +1,13 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
+using Bomberman.Bombing;
 using Bomberman.Utility;
 using UnityEngine;
 
 namespace Bomberman.Player
 {
+    /// <summary>
+    /// Handles triggering the player death flow
+    /// </summary>
     public class PlayerDeathView : MonoBehaviour, IBombable
     {
         [SerializeField] private PlayerModel _playerModel;

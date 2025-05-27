@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Bomberman.Bombing;
-using Bomberman.Player;
 using Bomberman.Pooling;
 using Bomberman.Utility;
 using UnityEngine;
@@ -8,6 +7,9 @@ using UnityEngine.InputSystem;
 
 namespace Bomberman.Player
 {
+    /// <summary>
+    /// Handles the spawning of bombs for the player and passing the relevant data to them
+    /// </summary>
     public class PlayerBombView : MonoBehaviour
     {
         [SerializeField] private InputActionReference _layBomb;

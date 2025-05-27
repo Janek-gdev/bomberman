@@ -4,6 +4,10 @@ using UnityEngine;
 
 namespace Bomberman.Enemies
 {
+    /// <summary>
+    /// Wanders without direction around the level
+    /// Used in sync with <see cref="Collisions.DirectionalCollisionDetector"/> to determine wanderable tiles
+    /// </summary>
     public class WanderingEnemyBrain : EnemyBrain
     {
         private void LateUpdate()
@@ -12,10 +16,10 @@ namespace Bomberman.Enemies
             {
                 foreach (var directionData in _directionDataCollection)
                 {
-                    directionData.IsValid = _collisionDetector.IsDirectionWalkable(directionData.Direction);
+                    directionData.TileIsClear = _directionalCollisionDetector.IsDirectionWalkable(directionData.Direction);
                 }
 
-                var validDirections = _directionDataCollection.Where(x => x.IsValid).ToList();
+                var validDirections = _directionDataCollection.Where(x => x.TileIsClear).ToList();
                 if (validDirections.Count == 0)
                 {
                     return;

@@ -1,10 +1,9 @@
 ﻿using System;
-using Bomberman.Utility;
 using UnityEngine;
 
 namespace Bomberman.Player
 {
-    [CreateAssetMenu(menuName = MenuName.Player + nameof(LivesModel), fileName = nameof(LivesModel))]
+    [CreateAssetMenu(menuName = ScriptableObjectMenuName.Player + nameof(LivesModel), fileName = nameof(LivesModel))]
     public class LivesModel : ResettableScriptableObject
     {
         [SerializeField] private int _startingLives = 2;

@@ -9,26 +9,31 @@ using UnityEngine;
 
 namespace Bomberman.Bombing
 {
+    /// <summary>
+    /// Represents a bomb as placed in the world
+    /// Spawns <see cref="Explosion"/> for damaging component
+    /// </summary>
     public class BombView : MonoBehaviour, IBombable
     {
         [SerializeField] private PlayerTileDetector _playerTileDetector;
         [SerializeField] private Explosion _centralExplosionPrefab;
         [SerializeField] private Explosion _connectorExplosionPrefab;
         [SerializeField] private Explosion _endExplosionPrefab;
+        
         private readonly RaycastHit2D[] _raycastResults = new RaycastHit2D[10];
 
         private Coroutine _explosionTimer;
         public event Action<BombView> OnBombExploded;
-        [SerializeField] private Animator _animator;
 
         private BombModel _bombModel;
-        public WalkableTileModel Tile { get; private set; }
+        private WalkableTileModel _tile;
+        
         public void Initialize(WalkableTileModel tileModel, BombModel bombModel)
         {
-            Tile = tileModel;
+            _tile = tileModel;
             _bombModel = bombModel;
-            Tile.IsBlocked = true;
-            _explosionTimer = StartCoroutine(StartCountdown());
+            _tile.IsBlocked = true;
+            _explosionTimer = StartCoroutine(StartExplosionCountdown());
             _playerTileDetector.OnPlayerIsOnTileChanged += OnPlayerIsOnTileChanged;
         }
 
@@ -41,7 +46,7 @@ namespace Bomberman.Bombing
             }
         }
 
-        private IEnumerator StartCountdown()
+        private IEnumerator StartExplosionCountdown()
         {
             yield return new WaitForSeconds(_bombModel.TimeToExplode);
             Explode();
@@ -62,7 +67,7 @@ namespace Bomberman.Bombing
                 explosion.Initialize(_bombModel);
             }
             OnBombExploded?.Invoke(this);
-            Tile.IsBlocked = false;
+            _tile.IsBlocked = false;
             Destroy(gameObject);
         }
 

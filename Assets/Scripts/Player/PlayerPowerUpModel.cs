@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using Bomberman.Bombing;
-using Bomberman.Player;
+using Bomberman.PowerUps;
 using UnityEngine;
 
 namespace Bomberman.Player
 {
-    [CreateAssetMenu(menuName = MenuName.Player + nameof(PlayerPowerUpModel), fileName = nameof(PlayerPowerUpModel))]
+    /// <summary>
+    /// Holds the players current power ups, the affect of the power ups, and how they're applied to <see cref="PlayerModel"/>
+    /// </summary>
+    [CreateAssetMenu(menuName = ScriptableObjectMenuName.Player + nameof(PlayerPowerUpModel), fileName = nameof(PlayerPowerUpModel))]
     public class PlayerPowerUpModel : ResettableScriptableObject
     {
         [SerializeField] private PlayerModel _playerModel;
@@ -72,7 +75,7 @@ namespace Bomberman.Player
             _powerUps = new List<PowerUp>();
         }
 
-        public void RemovePowerUp(PowerUp powerUp)
+        private void RemovePowerUp(PowerUp powerUp)
         {
             switch (powerUp)
             {

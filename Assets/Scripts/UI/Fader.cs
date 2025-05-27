@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 namespace Bomberman.UI
 {
+    /// <summary>
+    /// Fades the screen in and out 
+    /// </summary>
     public class Fader : MonoBehaviour
     {
         public static Fader Instance { get; private set; }

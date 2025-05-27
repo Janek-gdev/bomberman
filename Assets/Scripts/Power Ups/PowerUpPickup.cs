@@ -1,8 +1,9 @@
 ﻿using Bomberman.Collisions;
 using Bomberman.Player;
+using Bomberman.PowerUps;
 using UnityEngine;
 
-namespace Bomberman.Level
+namespace Bomberman.PowerUps
 {
     public class PowerUpPickup : MonoBehaviour
     {

@@ -2,17 +2,22 @@
 
 namespace Bomberman.Bombing
 {
-    [CreateAssetMenu(menuName = MenuName.Bombing + nameof(BombModel), fileName = nameof(BombModel))]
+    /// <summary>
+    /// Data used to generate bombs and their corresponding explosions
+    /// </summary>
+    [CreateAssetMenu(menuName = ScriptableObjectMenuName.Bombing + nameof(BombModel), fileName = nameof(BombModel))]
     public class BombModel : ResettableScriptableObject
     {
 
         [SerializeField] private int _playerWalkedOffLayer;
-        public int PlayerWalkedOffLayer => _playerWalkedOffLayer;
-        
+        [SerializeField] private int _baseExplosionRange;
         [SerializeField] private LayerMask _explosionStoppingLayers;
-        public LayerMask ExplosionStoppingLayers => _explosionStoppingLayers;
-        
         [SerializeField] private LayerMask _baseBombableLayerMask;
+        [SerializeField] private float _explosionDuration;
+        [SerializeField] private float _timeToExplode;
+
+        public int PlayerWalkedOffLayer => _playerWalkedOffLayer;
+        public LayerMask ExplosionStoppingLayers => _explosionStoppingLayers;
         private LayerMask _bombableLayerMask = -1;
         public LayerMask BombableLayerMask
         {
@@ -26,13 +31,10 @@ namespace Bomberman.Bombing
             }
             set => _bombableLayerMask = value;
         }
-        [SerializeField] private float _explosionDuration;
         public float ExplosionDuration => _explosionDuration;
         
-        [SerializeField] private float _timeToExplode;
         public float TimeToExplode => _timeToExplode;
         
-        [SerializeField] private int _baseExplosionRange;
         private int _explosionRange;
 
         public int ExplosionRange

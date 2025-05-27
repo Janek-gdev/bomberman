@@ -1,10 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Bomberman.Level
 {
-    [CreateAssetMenu(menuName = MenuName.LevelLayout + nameof(LevelLayoutGeneratorModel),
+    /// <summary>
+    /// Spawns the blocker/free tiles in the level
+    /// Separate from general level spawning to allow use as a template
+    /// </summary>
+    [CreateAssetMenu(menuName = ScriptableObjectMenuName.LevelLayout + nameof(LevelLayoutGeneratorModel),
         fileName = nameof(LevelLayoutGeneratorModel))]
     public class LevelLayoutGeneratorModel : ResettableScriptableSingleton<LevelLayoutGeneratorModel>
     {

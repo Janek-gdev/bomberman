@@ -1,22 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using Bomberman.Utility;
+﻿using Bomberman.Utility;
 using UnityEngine;
 
 namespace Bomberman.Collisions
 {
-    public class CollisionDetector : MonoBehaviour
+    /// <summary>
+    /// Detects if there would be a collision in a given direction
+    /// </summary>
+    public class DirectionalCollisionDetector : MonoBehaviour
     {
         [SerializeField] private LayerMask _nonWalkableLayerMask;
+        [SerializeField] private float _raycastDistance = 1f;
+
+        private readonly RaycastHit2D[] _raycastResults = new RaycastHit2D[10];
 
         public LayerMask NonWalkableLayerMask
         {
             get => _nonWalkableLayerMask;
             set => _nonWalkableLayerMask = value;
         }
-        
-        [SerializeField] private float _raycastDistance = 1f;
-        private readonly RaycastHit2D[] _raycastResults = new RaycastHit2D[10];
 
         public bool IsDirectionWalkable(Direction direction)
         {
@@ -32,7 +33,5 @@ namespace Bomberman.Collisions
             var hits = Physics2D.RaycastNonAlloc(transform.position, direction, _raycastResults, _raycastDistance, _nonWalkableLayerMask);
             return hits == 0;
         }
-
-        
     }
 }

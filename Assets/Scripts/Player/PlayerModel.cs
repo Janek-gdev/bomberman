@@ -4,11 +4,37 @@ using UnityEngine;
 
 namespace Bomberman.Player
 {
-    [CreateAssetMenu(menuName = MenuName.Player + nameof(PlayerModel), fileName = nameof(PlayerModel))]
+    /// <summary>
+    /// Handles the base and modified data for the player, works closely with <see cref="PlayerPowerUpModel"/>
+    /// </summary>
+    [CreateAssetMenu(menuName = ScriptableObjectMenuName.Player + nameof(PlayerModel), fileName = nameof(PlayerModel))]
     public class PlayerModel : ResettableScriptableObject
     {
-        public event Action<LayerMask> OnNonWalkableLayerMaskChanged;
+        [SerializeField] private int _baseMaxBombAllowance;
+        [SerializeField] private float _baseMoveSpeed = 4f;
+        [SerializeField] private float _gridCorrectionSpeed;
+        
+        private int _maxBombAllowance;
+        private bool _isAlive = true;
         private LayerMask _nonWalkableLayerMask;
+        private float _moveSpeed;
+        private WalkableTileModel _currentTile;
+
+        public float GridCorrectionSpeed => _gridCorrectionSpeed;
+
+        public float MoveSpeed
+        {
+            get
+            {
+                if (_moveSpeed == 0)
+                {
+                    _moveSpeed = _baseMoveSpeed;
+                }
+                return _moveSpeed;
+            }
+            set => _moveSpeed = value;
+        }
+        public event Action<LayerMask> OnNonWalkableLayerMaskChanged;
         public LayerMask NonWalkableLayerMask
         {
             get => _nonWalkableLayerMask;
@@ -23,7 +49,6 @@ namespace Bomberman.Player
         }
         
         public event Action<bool> OnIsAliveChanged;
-        [SerializeField] private bool _isAlive;
         public bool IsAlive
         {
             get => _isAlive;
@@ -37,27 +62,7 @@ namespace Bomberman.Player
             }
         }
         
-        [SerializeField] private float _baseMoveSpeed = 4f;
-        private float _moveSpeed;
-
-        public float MoveSpeed
-        {
-            get
-            {
-                if (_moveSpeed == 0)
-                {
-                    _moveSpeed = _baseMoveSpeed;
-                }
-                return _moveSpeed;
-            }
-            set => _moveSpeed = value;
-        }
-
-        [SerializeField] private float _gridCorrectionSpeed;
-        public float GridCorrectionSpeed => _gridCorrectionSpeed;
-        
         public event Action<WalkableTileModel> OnCurrentTileChanged;
-        private WalkableTileModel _currentTile;
         public WalkableTileModel CurrentTile
         {
             get => _currentTile;
@@ -71,9 +76,6 @@ namespace Bomberman.Player
                 }
             }
         }
-        
-        [SerializeField] private int _baseMaxBombAllowance;
-        private int _maxBombAllowance;
 
         public int MaxBombAllowance
         {

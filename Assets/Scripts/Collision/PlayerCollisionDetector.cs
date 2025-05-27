@@ -4,18 +4,22 @@ using UnityEngine;
 
 namespace Bomberman.Collisions
 {
+    /// <summary>
+    /// Detects if this object collides with the player
+    /// </summary>
     public class PlayerCollisionDetector : MonoBehaviour
     {
         [SerializeField] private float _detectionRange;
         [SerializeField] private LayerMask _playerLayer;
         private readonly RaycastHit2D[] _raycastResults = new RaycastHit2D[10];
-        
+        public bool ShouldDetectPlayer { get; set; } = true;
+
         public event Action<GameObject> OnDetectedPlayerChanged;
         private GameObject _detectedPlayer;
         public GameObject DetectedPlayer
         {
             get => _detectedPlayer;
-            set
+            private set
             {
                 if (value != _detectedPlayer)
                 {
@@ -25,7 +29,6 @@ namespace Bomberman.Collisions
             }
         }
 
-        public bool ShouldDetectPlayer { get; set; } = true;
         private void Update()
         {
             if (ShouldDetectPlayer)

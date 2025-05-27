@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelName: LEVEL 2
   _enemies:
-  - _enemyModel: {fileID: 11400000, guid: de352d8bdc72a9b46962c2d8369efd0d, type: 2}
+  - EnemyModel: {fileID: 11400000, guid: 485b35bbc967028499207ac3eadd2cb5, type: 2}
     Amount: 3
   _destructibleTileCount: 100
   _availablePowerUp: 2

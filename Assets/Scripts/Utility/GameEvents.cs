@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Bomberman.Utility
 {
-    [CreateAssetMenu(menuName = MenuName.Utility + nameof(GameEvents), fileName = nameof(GameEvents))]
+    [CreateAssetMenu(menuName = ScriptableObjectMenuName.Utility + nameof(GameEvents), fileName = nameof(GameEvents))]
     public class GameEvents : ScriptableSingleton<GameEvents>
     {
         public Action OnLevelTeardown;

@@ -1,5 +1,4 @@
-﻿using System;
-using Bomberman.Collisions;
+﻿using Bomberman.Collisions;
 using Bomberman.Level;
 using Bomberman.Utility;
 using UnityEngine;
@@ -7,17 +6,21 @@ using UnityEngine.InputSystem;
 
 namespace Bomberman.Player
 {
+    /// <summary>
+    /// Converts input to directional changes.
+    /// Handles collision detection and allows a slight wrapping around corners (grid correction) of the player
+    /// </summary>
     public class PlayerMovementView : MonoBehaviour
     {
         [SerializeField] private PlayerModel _playerModel;
         [SerializeField] private Animator _animator;
-        [SerializeField] private CollisionDetector _collisionDetector;
+        [SerializeField] private DirectionalCollisionDetector _directionalCollisionDetector;
         
         [SerializeField] private InputActionReference _moveInput;
 
         private void OnEnable()
         {
-            _playerModel.NonWalkableLayerMask = _collisionDetector.NonWalkableLayerMask;
+            _playerModel.NonWalkableLayerMask = _directionalCollisionDetector.NonWalkableLayerMask;
             _playerModel.OnNonWalkableLayerMaskChanged += UpdateNonWalkableLayerMask;
         }
 
@@ -28,7 +31,7 @@ namespace Bomberman.Player
 
         private void UpdateNonWalkableLayerMask(LayerMask _)
         {
-            _collisionDetector.NonWalkableLayerMask = _playerModel.NonWalkableLayerMask;
+            _directionalCollisionDetector.NonWalkableLayerMask = _playerModel.NonWalkableLayerMask;
         }
 
         protected void Update()
@@ -38,7 +41,7 @@ namespace Bomberman.Player
                 return;
             }
             var strongestMovementDirection = GetInputDirection(_moveInput.action.ReadValue<Vector2>());
-            if (_collisionDetector.IsDirectionWalkable(strongestMovementDirection))
+            if (_directionalCollisionDetector.IsDirectionWalkable(strongestMovementDirection))
             {
                 var movement = (Vector3) DirectionUtility.GetDirectionVector(strongestMovementDirection) *
                                       (_playerModel.MoveSpeed * Time.deltaTime);

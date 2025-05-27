@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Basic Enemy
   m_EditorClassIdentifier: 
   _moveSpeed: 1
+  _enemyPrefab: {fileID: 8628380674280720462, guid: 544499f5f05346a40bc84063fb4a12b4, type: 3}

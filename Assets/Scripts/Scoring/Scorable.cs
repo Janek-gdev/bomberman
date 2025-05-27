@@ -2,6 +2,9 @@
 
 namespace Bomberman.Scoring
 {
+    /// <summary>
+    /// A destructible object that gives the player score when destroyed
+    /// </summary>
     public class Scorable : MonoBehaviour
     {
         [SerializeField] private int _score;

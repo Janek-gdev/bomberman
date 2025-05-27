@@ -3,14 +3,15 @@ using UnityEngine;
 
 namespace Bomberman.Timing
 {
-    [CreateAssetMenu(menuName = MenuName.UI + nameof(TimerModel), fileName = nameof(TimerModel))]
+    [CreateAssetMenu(menuName = ScriptableObjectMenuName.UI + nameof(TimerModel), fileName = nameof(TimerModel))]
     public class TimerModel : ResettableScriptableObject
     {
         [SerializeField] private int _timePerLevel;
         public int TimePerLevel => _timePerLevel;
-        
-        public event Action<bool> OnTimerPausedChanged;
+        private int _timeLeftOnCurrentLevel;
         private bool _timerPaused;
+
+        public event Action<bool> OnTimerPausedChanged;
         public bool TimerPaused
         {
             get => _timerPaused;
@@ -25,7 +26,6 @@ namespace Bomberman.Timing
         }
         
         public event Action<int> OnTimeLeftOnCurrentLevelChanged;
-        private int _timeLeftOnCurrentLevel;
         public int TimeLeftOnCurrentLevel
         {
             get => _timeLeftOnCurrentLevel;
@@ -43,6 +43,7 @@ namespace Bomberman.Timing
         {
             base.ResetAfterPlayInEditor();
             TimeLeftOnCurrentLevel = 0;
+            _timerPaused = false;
         }
     }
 }

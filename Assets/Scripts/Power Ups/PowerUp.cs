@@ -1,4 +1,4 @@
-﻿namespace Bomberman.Player
+﻿namespace Bomberman.PowerUps
 {
     public enum PowerUp 
     {

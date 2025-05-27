@@ -4,29 +4,32 @@ using UnityEngine;
 
 namespace Bomberman.Enemies
 {
+    /// <summary>
+    /// Used for controlling enemy movements
+    /// </summary>
     public abstract class EnemyBrain : MonoBehaviour
     {
-        protected class DirectionData
+        protected class CollisionDirectionData
         {
-            public bool IsValid;
+            public bool TileIsClear;
             public Direction Direction;
 
-            public DirectionData(bool isValid, Direction direction)
+            public CollisionDirectionData(bool tileIsClear, Direction direction)
             {
-                IsValid = isValid;
+                TileIsClear = tileIsClear;
                 Direction = direction;
             }
         }
         [SerializeField] protected EnemyModel _enemyModel;
-        [SerializeField] protected CollisionDetector _collisionDetector;
+        [SerializeField] protected DirectionalCollisionDetector _directionalCollisionDetector;
         [SerializeField] protected TileMovable _tileMovable;
-        protected readonly DirectionData[] _directionDataCollection = new DirectionData[4];
+        protected readonly CollisionDirectionData[] _directionDataCollection = new CollisionDirectionData[4];
         protected virtual void Awake()
         {
-            _directionDataCollection[0] = new DirectionData(false, Direction.Left);
-            _directionDataCollection[1] = new DirectionData(false, Direction.Right);
-            _directionDataCollection[2] = new DirectionData(false, Direction.Up);
-            _directionDataCollection[3] = new DirectionData(false, Direction.Down);
+            _directionDataCollection[0] = new CollisionDirectionData(false, Direction.Left);
+            _directionDataCollection[1] = new CollisionDirectionData(false, Direction.Right);
+            _directionDataCollection[2] = new CollisionDirectionData(false, Direction.Up);
+            _directionDataCollection[3] = new CollisionDirectionData(false, Direction.Down);
             _tileMovable.MoveSpeed = _enemyModel.MoveSpeed;
         }
     }

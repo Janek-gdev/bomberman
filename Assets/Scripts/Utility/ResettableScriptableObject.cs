@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Bomberman
 {
+    /// <summary>
+    /// A scriptable object that has non-serialized data that needs reset between runs
+    /// </summary>
     public abstract class ResettableScriptableObject : ScriptableObject
 #if UNITY_EDITOR
         , ISerializationCallbackReceiver

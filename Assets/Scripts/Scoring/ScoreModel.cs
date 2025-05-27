@@ -3,14 +3,15 @@ using UnityEngine;
 
 namespace Bomberman.Scoring
 {
-    [CreateAssetMenu(menuName = MenuName.Scoring + nameof(ScoreModel), fileName = nameof(ScoreModel))]
+    [CreateAssetMenu(menuName = ScriptableObjectMenuName.Scoring + nameof(ScoreModel), fileName = nameof(ScoreModel))]
     public class ScoreModel : ResettableScriptableSingleton<ScoreModel>
     {
         [SerializeField] private int _scorePerSecondLeft = 10;
-        public int ScorePerSecondLeft => _scorePerSecondLeft;
-        
-        public event Action<int> OnScoreChanged;
         private int _score;
+        public int ScorePerSecondLeft => _scorePerSecondLeft;
+        public bool CanScore { get; set; } = true;
+
+        public event Action<int> OnScoreChanged;
         public int Score
         {
             get => _score;
@@ -24,7 +25,6 @@ namespace Bomberman.Scoring
             }
         }
 
-        public bool CanScore { get; set; } = true;
 
         protected override void ResetAfterPlayInEditor()
         {

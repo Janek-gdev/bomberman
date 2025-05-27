@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections;
-using Bomberman.Bombing;
+﻿using System.Collections;
+using Bomberman.Player;
 using Bomberman.Utility;
 using UnityEngine;
 
-namespace Bomberman.Player
+namespace Bomberman.Bombing
 {
+    /// <summary>
+    /// Represents a single instance/tile of an explosion
+    /// </summary>
     public class Explosion : MonoBehaviour
     {
         private BombModel _bombModel;

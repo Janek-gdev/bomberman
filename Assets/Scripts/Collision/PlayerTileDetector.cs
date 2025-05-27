@@ -5,10 +5,17 @@ using UnityEngine;
 
 namespace Bomberman.Collisions
 {
+    /// <summary>
+    /// Detects if the player is on the same tile is this gameobject
+    /// </summary>
     public class PlayerTileDetector : MonoBehaviour
     {
+        [SerializeField] private PlayerModel _playerModel;
+        
+        private WalkableTileModel _tile;
         public event Action<bool> OnPlayerIsOnTileChanged;
         private bool _playerIsOnTile;
+
         public bool PlayerIsOnTile
         {
             get => _playerIsOnTile;
@@ -21,8 +28,6 @@ namespace Bomberman.Collisions
                 }
             }
         }
-        [SerializeField] private PlayerModel _playerModel;
-        private WalkableTileModel _tile;
 
         private void Awake()
         {

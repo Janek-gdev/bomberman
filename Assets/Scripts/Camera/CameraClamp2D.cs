@@ -4,6 +4,9 @@ using UnityEngine.Assertions;
 
 namespace Bomberman.CameraControl
 {
+    /// <summary>
+    /// Clamps the camera to within the level and handles player following
+    /// </summary>
     [RequireComponent(typeof(Camera))]
     public class CameraClamp2D : MonoBehaviour
     {
@@ -13,7 +16,7 @@ namespace Bomberman.CameraControl
         private Vector2 _max;
         private Camera _camera;
         
-        private float _orthoSize;
+        private float _orthographicSize;
         private float _aspect;
         private float _halfHeight;
         private float _halfWidth;
@@ -25,10 +28,10 @@ namespace Bomberman.CameraControl
             _camera = GetComponent<Camera>();
             Assert.IsTrue(_camera.orthographic);
 
-            _orthoSize = _camera.orthographicSize;
+            _orthographicSize = _camera.orthographicSize;
             _aspect = _camera.aspect;
-            _halfHeight = _orthoSize;
-            _halfWidth = _orthoSize * _aspect;
+            _halfHeight = _orthographicSize;
+            _halfWidth = _orthographicSize * _aspect;
         }
 
         private void LateUpdate()

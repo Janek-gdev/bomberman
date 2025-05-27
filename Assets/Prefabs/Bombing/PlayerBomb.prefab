@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1634442326409438462}
   - component: {fileID: 7693540347305149691}
   - component: {fileID: 2798055944474829096}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 7172681185947992787}
   - component: {fileID: 4109612900590110458}
   - component: {fileID: 3475233297179183199}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PlayerBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,6 @@ MonoBehaviour:
   _centralExplosionPrefab: {fileID: 8519447135431085431, guid: bf35252382a50f0469bc2e772c469bbb, type: 3}
   _connectorExplosionPrefab: {fileID: 8519447135431085431, guid: 6213bb5a485b49a4ebe3559973b926fc, type: 3}
   _endExplosionPrefab: {fileID: 8519447135431085431, guid: e24e66fb060191941b8a4662e8822a1e, type: 3}
-  _animator: {fileID: 2798055944474829096}
 --- !u!114 &3475233297179183199
 MonoBehaviour:
   m_ObjectHideFlags: 0

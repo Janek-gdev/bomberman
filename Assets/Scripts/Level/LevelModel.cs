@@ -2,17 +2,21 @@ using System;
 using System.Collections.Generic;
 using Bomberman.Enemies;
 using Bomberman.Player;
+using Bomberman.PowerUps;
 using UnityEngine;
 
 namespace Bomberman.Level
 {
-    [CreateAssetMenu(menuName = MenuName.LevelLayout + nameof(LevelModel), fileName = nameof(LevelModel))]
+    /// <summary>
+    /// Represents a playable level within the game
+    /// </summary>
+    [CreateAssetMenu(menuName = ScriptableObjectMenuName.LevelLayout + nameof(LevelModel), fileName = nameof(LevelModel))]
     public class LevelModel : ResettableScriptableObject
     {
         [Serializable]
         public class EnemyCounter
         {
-            public EnemyModel _enemyModel;
+            public EnemyModel EnemyModel;
             public int Amount;
         }
 

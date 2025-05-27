@@ -1,6 +1,4 @@
-﻿using System;
-using Bomberman.Player;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 namespace Bomberman.Player

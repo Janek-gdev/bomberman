@@ -1,4 +1,4 @@
-﻿namespace Bomberman.Player
+﻿namespace Bomberman.Bombing
 {
     public interface IBombable
     {

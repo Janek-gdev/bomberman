@@ -1,5 +1,6 @@
 ﻿using System;
 using Bomberman.Player;
+using Bomberman.PowerUps;
 using UnityEngine;
 
 namespace Bomberman.Level

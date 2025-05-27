@@ -1,8 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Bomberman.Player
 {
+    /// <summary>
+    /// Handles moving between tiles smoothly
+    /// </summary>
     public class TileMovable : MonoBehaviour
     {
         public Vector2 TargetPosition { get; set; } 

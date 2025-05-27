@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Free Walk Enemy
   m_EditorClassIdentifier: 
   _moveSpeed: 0.5
+  _enemyPrefab: {fileID: 8693704523790842608, guid: d9bb081bd64231449ba97b6520297beb, type: 3}

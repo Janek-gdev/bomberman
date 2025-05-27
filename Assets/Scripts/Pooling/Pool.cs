@@ -2,6 +2,10 @@
 
 namespace Bomberman.Pooling
 {
+    /// <summary>
+    /// Handles spawning of a prefab for pooling purposes
+    /// </summary>
+    /// <typeparam name="T">The type of object to spawn</typeparam>
     public abstract class Pool<T> : ScriptableObject where T : MonoBehaviour
     {
         [SerializeField] private T _poolableObject;
@@ -15,6 +19,11 @@ namespace Bomberman.Pooling
         public T Spawn(Vector3 position, Quaternion rotation)
         {
             return Instantiate(_poolableObject, position, rotation);
+        }
+
+        public void ReturnToPool(T poolable)
+        {
+            Destroy(poolable.gameObject);
         }
     }
 }

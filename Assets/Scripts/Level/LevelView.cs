@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Bomberman.Enemies;
 using Bomberman.Player;
+using Bomberman.PowerUps;
 using Bomberman.Utility;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -10,6 +10,9 @@ using Random = UnityEngine.Random;
 
 namespace Bomberman.Level
 {
+    /// <summary>
+    /// Handles generating of a level (destructible tiles, enemies, powerups, exit, etc.) using <see cref="LevelModel"/> and <see cref="LevelPrefabsModel"/>
+    /// </summary>
     public class LevelView : MonoBehaviour
     {
         private LevelModel _levelModel;
@@ -91,6 +94,7 @@ namespace Bomberman.Level
 
         private void HandleTileDestruction(DestructibleTileView destroyedTile)
         {
+            //todo would make more sense to handle this on the destructible tiles themselves, saves this class handling non-generation based stuff
             destroyedTile.OnTileDestroyed -= HandleTileDestruction;
             _levelModel.SpawnedDestructibleTiles.Remove(destroyedTile);
             if (destroyedTile.TileModel.IsExit)
@@ -119,7 +123,7 @@ namespace Bomberman.Level
             {
                 for (int i = freeTileIndex; i < freeTileIndex + enemyCounter.Amount; i++)
                 {
-                    var spawnedEnemy = Instantiate(_levelModel.Prefabs.EnemyPrefabs.First(x => x.EnemyModel == enemyCounter._enemyModel).Prefab, shuffledTiles[i].Position,
+                    var spawnedEnemy = Instantiate(enemyCounter.EnemyModel.EnemyPrefab, shuffledTiles[i].Position,
                         Quaternion.identity, transform);
                     spawnedEnemy.OnEnemyDestroyed += HandleEnemyDestruction;
                     _levelModel.SpawnedEnemies.Add(spawnedEnemy);
@@ -160,6 +164,7 @@ namespace Bomberman.Level
 
         private void TearDownLevel()
         {
+            //todo these components could probably just implement a teardown interface and handle this themselves
             foreach (var destructibleTileView in _levelModel.SpawnedDestructibleTiles)
             {
                 destructibleTileView.TileModel.Reset();

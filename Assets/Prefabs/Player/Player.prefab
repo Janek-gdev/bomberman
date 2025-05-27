@@ -85,7 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerModel: {fileID: 11400000, guid: 0af00f853f82ee84e94da3e3fa7e31a2, type: 2}
   _animator: {fileID: 3682193771497456224}
-  _collisionDetector: {fileID: 8108137167917359268}
+  _directionalCollisionDetector: {fileID: 8108137167917359268}
   _moveInput: {fileID: -639187968204785771, guid: 06d748555ede1234bb923740bbd78d34, type: 3}
 --- !u!95 &3682193771497456224
 Animator:

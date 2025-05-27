@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Bomberman
 {
+    /// <summary>
+    /// A singleton version of <see cref="ResettableScriptableObject"/>
+    /// </summary>
     public abstract class ResettableScriptableSingleton<T> : ScriptableSingleton<T> 
 #if UNITY_EDITOR
         , ISerializationCallbackReceiver
