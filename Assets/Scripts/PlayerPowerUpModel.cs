@@ -68,6 +68,8 @@ namespace Bomberman.Player
             {
                 RemovePowerUp(powerUp);
             }
+
+            _powerUps = new List<PowerUp>();
         }
 
         public void RemovePowerUp(PowerUp powerUp)

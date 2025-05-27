@@ -8,6 +8,7 @@ namespace Bomberman.CameraControl
     public class CameraClamp2D : MonoBehaviour
     {
         [SerializeField] private Transform _target;
+        [SerializeField] private float _uiCameraOffset;
         private Vector2 _min;
         private Vector2 _max;
         private Camera _camera;
@@ -50,7 +51,7 @@ namespace Bomberman.CameraControl
         private Vector2 ClampCamera(Vector2 newCameraPosition)
         {
             newCameraPosition.x = Mathf.Clamp(newCameraPosition.x, _min.x + _halfWidth, _max.x - _halfWidth);
-            newCameraPosition.y = Mathf.Clamp(newCameraPosition.y, _min.y + _halfHeight, _max.y - _halfHeight);
+            newCameraPosition.y = Mathf.Clamp(newCameraPosition.y, _min.y + _halfHeight, _uiCameraOffset + _max.y - _halfHeight);
             return newCameraPosition;
         }
     }

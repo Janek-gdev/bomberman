@@ -11,5 +11,8 @@
         public const string Pooling = Bomberman + "Pooling/";
         public const string Bombing = Bomberman + "Bombing/";
         public const string Utility = Bomberman + "Utility/";
+        public const string UI = Bomberman + "UI/";
+        public const string Timing = Bomberman + "Timing/";
+        public const string Scoring = Bomberman + "Scoring/";
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace Bomberman.UI
@@ -8,10 +9,10 @@ namespace Bomberman.UI
     public class Fader : MonoBehaviour
     {
         public static Fader Instance { get; private set; }
-
+    
         [SerializeField] CanvasGroup _canvasGroup;
         [SerializeField] float _defaultDuration = 1f;
-
+        [SerializeField] private TMP_Text _text;
         public event Action OnFadeComplete;
 
         void Awake()
@@ -26,13 +27,17 @@ namespace Bomberman.UI
             DontDestroyOnLoad(gameObject);
         }
 
+        public void DisplayText(string text)
+        {
+            _text.text = text;
+        }
+
         public void FadeIn(float duration = -1f) => StartCoroutine(Fade(1f, 0f, duration));
         public void FadeOut(float duration = -1f) => StartCoroutine(Fade(0f, 1f, duration));
 
         private IEnumerator Fade(float from, float to, float duration)
         {
-            if (_canvasGroup == null) yield break;
-
+            _text.text = "";
             _canvasGroup.alpha = from;
             _canvasGroup.blocksRaycasts = true;
 

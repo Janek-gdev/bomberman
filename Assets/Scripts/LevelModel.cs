@@ -15,8 +15,8 @@ namespace Bomberman.Level
             public EnemyModel _enemyModel;
             public int Amount;
         }
-        
-        
+
+        [SerializeField] private string _levelName;
         [SerializeField] private List<EnemyCounter> _enemies;
         [SerializeField, Min(2)] private int _destructibleTileCount;
         [SerializeField] private PowerUp _availablePowerUp;
@@ -30,6 +30,7 @@ namespace Bomberman.Level
         public int DestructibleTileCount => _destructibleTileCount;
         public PowerUp AvailablePowerUp => _availablePowerUp;
         public LevelPrefabsModel Prefabs => _levelPrefabsModel;
+        public string LevelName => _levelName;
 
         protected override void ResetAfterPlayInEditor()
         {

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 518577396908630087}
   - component: {fileID: 1087580289645846079}
   - component: {fileID: 769466802023812300}
+  - component: {fileID: 2629489826738160634}
   m_Layer: 0
   m_Name: PowerUpBase
   m_TagString: Untagged
@@ -61,6 +62,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerPowerUp: {fileID: 11400000, guid: e2e522a7cfffb754e9d10f869819eb94, type: 2}
   _playerTileDetector: {fileID: 1087580289645846079}
+--- !u!114 &2629489826738160634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6404565524275022395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ecef704e474624965f0b66eac79322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _score: 1000
 --- !u!1 &8002845276044395733
 GameObject:
   m_ObjectHideFlags: 0

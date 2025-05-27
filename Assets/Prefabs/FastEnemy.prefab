@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1902552197512152804, guid: 544499f5f05346a40bc84063fb4a12b4, type: 3}
+      propertyPath: _score
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 3687566003528153041, guid: 544499f5f05346a40bc84063fb4a12b4, type: 3}
       propertyPath: m_Name
       value: FastEnemy

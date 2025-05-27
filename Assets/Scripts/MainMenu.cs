@@ -28,7 +28,6 @@ namespace Bomberman.UI
         {
             Fader.Instance.OnFadeComplete -= LoadGameScene;
             SceneManager.LoadScene("GameScene");
-            Fader.Instance.FadeIn(1);
         }
     }
 }
