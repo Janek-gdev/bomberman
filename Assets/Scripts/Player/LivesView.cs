@@ -3,7 +3,7 @@ using Bomberman.Player;
 using TMPro;
 using UnityEngine;
 
-namespace Bomberman.UI
+namespace Bomberman.Player
 {
     public class LivesView : MonoBehaviour
     {
