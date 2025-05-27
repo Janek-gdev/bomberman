@@ -1440,6 +1440,8 @@ MonoBehaviour:
   _levelModels:
   - {fileID: 11400000, guid: b80824341e7c8d440b2667971910df62, type: 2}
   - {fileID: 11400000, guid: f6dd1bc39c071ac469483cb717088b03, type: 2}
+  - {fileID: 11400000, guid: 9faf06bfa59fe5d4cbc63ce344836c1e, type: 2}
+  - {fileID: 11400000, guid: 86b2f70aeda4c4a4f8e1eb46c2e81cb6, type: 2}
 --- !u!1 &1873456400
 GameObject:
   m_ObjectHideFlags: 0

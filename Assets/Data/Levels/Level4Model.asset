@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 995d2c94fff54924a5d91601adefa7aa, type: 3}
-  m_Name: Level2Model
+  m_Name: Level4Model
   m_EditorClassIdentifier: 
-  _levelName: LEVEL 2
+  _levelName: FINAL LEVEL
   _enemies:
-  - EnemyModel: {fileID: 11400000, guid: 485b35bbc967028499207ac3eadd2cb5, type: 2}
-    Amount: 2
+  - EnemyModel: {fileID: 11400000, guid: 87d0943bdeaa6da4ebda63337a4ac6eb, type: 2}
+    Amount: 3
   - EnemyModel: {fileID: 11400000, guid: de352d8bdc72a9b46962c2d8369efd0d, type: 2}
     Amount: 3
-  _destructibleTileCount: 40
-  _availablePowerUp: 1
+  - EnemyModel: {fileID: 11400000, guid: 485b35bbc967028499207ac3eadd2cb5, type: 2}
+    Amount: 3
+  _destructibleTileCount: 50
+  _availablePowerUp: 6
   _levelPrefabsModel: {fileID: 11400000, guid: eced87acd955e5d438b30e5a0d4c4e13, type: 2}
