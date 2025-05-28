@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Bomberman.Scoring
 {
     [CreateAssetMenu(menuName = ScriptableObjectMenuName.Scoring + nameof(ScoreModel), fileName = nameof(ScoreModel))]
-    public class ScoreModel : ResettableScriptableSingleton<ScoreModel>
+    public class ScoreModel : ResettableScriptableObject
     {
         [SerializeField] private int _scorePerSecondLeft = 10;
         private int _score;

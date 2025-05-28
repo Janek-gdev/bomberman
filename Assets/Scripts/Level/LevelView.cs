@@ -15,6 +15,7 @@ namespace Bomberman.Level
     /// </summary>
     public class LevelView : MonoBehaviour
     {
+        [SerializeField] private LevelLayoutGeneratorModel _levelLayoutGeneratorModel;
         private LevelModel _levelModel;
         private const int PowerUpIndex = 0;
         private const int ExitIndex = 1;
@@ -24,12 +25,12 @@ namespace Bomberman.Level
         
         private void OnEnable()
         {
-            GameEvents.instance.OnLevelTeardown += TearDownLevel;
+            GameEvent.OnLevelTeardown += TearDownLevel;
         }
 
         private void OnDisable()
         {
-            GameEvents.instance.OnLevelTeardown -= TearDownLevel;
+            GameEvent.OnLevelTeardown -= TearDownLevel;
         }
 
         public void LoadLevel(LevelModel levelModel)
@@ -46,7 +47,7 @@ namespace Bomberman.Level
 
         private void GenerateLevel()
         {
-            var walkableTiles = LevelLayoutGeneratorModel.instance.WalkableTiles;
+            var walkableTiles = _levelLayoutGeneratorModel.WalkableTiles;
             
             Assert.IsTrue(_levelModel.DestructibleTileCount < walkableTiles.Count - PlayerStartingTilesAllocation);
 

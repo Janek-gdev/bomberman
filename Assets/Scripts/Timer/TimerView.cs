@@ -21,16 +21,16 @@ namespace Bomberman.Timing
         {
             UpdateTimerUI();
             _secondsTimer = new WaitForSeconds(1);
-            GameEvents.instance.OnLevelSetupComplete += StartTimer;
-            GameEvents.instance.OnLevelTeardown += StopTimer;
+            GameEvent.OnLevelSetupComplete += StartTimer;
+            GameEvent.OnLevelTeardown += StopTimer;
             _timerModel.OnTimeLeftOnCurrentLevelChanged += UpdateTimerUI;
             _timerModel.OnTimerPausedChanged += ToggleTimer;
         }
 
         private void OnDisable()
         {
-            GameEvents.instance.OnLevelSetupComplete -= StartTimer;
-            GameEvents.instance.OnLevelTeardown -= StopTimer;
+            GameEvent.OnLevelSetupComplete -= StartTimer;
+            GameEvent.OnLevelTeardown -= StopTimer;
             _timerModel.OnTimeLeftOnCurrentLevelChanged -= UpdateTimerUI;
             _timerModel.OnTimerPausedChanged -= ToggleTimer;
         }

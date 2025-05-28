@@ -10,6 +10,7 @@ namespace Bomberman.CameraControl
     [RequireComponent(typeof(Camera))]
     public class CameraClamp2D : MonoBehaviour
     {
+        [SerializeField] private LevelLayoutGeneratorModel _levelLayoutGeneratorModel;
         [SerializeField] private Transform _target;
         [SerializeField] private float _uiCameraOffset;
         private Vector2 _min;
@@ -23,8 +24,8 @@ namespace Bomberman.CameraControl
 
         private void Awake()
         {
-            _min = LevelLayoutGeneratorModel.instance.MinTilePosition;
-            _max = LevelLayoutGeneratorModel.instance.MaxTilePosition;
+            _min = _levelLayoutGeneratorModel.MinTilePosition;
+            _max = _levelLayoutGeneratorModel.MaxTilePosition;
             _camera = GetComponent<Camera>();
             Assert.IsTrue(_camera.orthographic);
 

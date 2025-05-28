@@ -28,7 +28,7 @@ namespace Bomberman.Level
         {
             if (_levelModel.SpawnedEnemies.Count == 0)
             {
-                GameEvents.instance.OnLevelComplete?.Invoke();
+                GameEvent.OnLevelComplete?.Invoke();
             }
         }
     }

@@ -14,6 +14,7 @@ namespace Bomberman.Player
     /// </summary>
     public class PlayerMovementView : MonoBehaviour
     {
+        [SerializeField] private LevelLayoutGeneratorModel _levelLayoutGeneratorModel;
         [SerializeField] private PlayerModel _playerModel;
         [SerializeField] private Animator _animator;
         [SerializeField] private SpriteRenderer _spriteRenderer;
@@ -60,14 +61,13 @@ namespace Bomberman.Player
                 transform.position += movement;
             }
 
-            _playerModel.CurrentTile = LevelLayoutGeneratorModel.instance.GetClosestFreeTile(transform);
+            _playerModel.CurrentTile = _levelLayoutGeneratorModel.GetClosestFreeTile(transform);
         }
 
         private void SetAnimation(Direction strongestMovementDirection)
         {
             _animator.speed = strongestMovementDirection == Direction.None ? 0 : 1;
             _spriteRenderer.flipX = strongestMovementDirection == Direction.Left;
-            Debug.Log(strongestMovementDirection);
             switch (strongestMovementDirection)
             {
                 case Direction.Left:
@@ -114,13 +114,13 @@ namespace Bomberman.Player
             
             if (strongestMovementDirection is Direction.Left or Direction.Right)
             {
-                var closestTile = LevelLayoutGeneratorModel.instance.GetClosestFreeTile(transform);
+                var closestTile = _levelLayoutGeneratorModel.GetClosestFreeTile(transform);
                 movement.y += (closestTile.Position.y - transform.position.y) *
                               (_playerModel.GridCorrectionSpeed * Time.deltaTime);
             }
             else if (strongestMovementDirection is Direction.Up or Direction.Down)
             {
-                var closestTile = LevelLayoutGeneratorModel.instance.GetClosestFreeTile(transform);
+                var closestTile = _levelLayoutGeneratorModel.GetClosestFreeTile(transform);
                 movement.x += (closestTile.Position.x - transform.position.x) *
                               (_playerModel.GridCorrectionSpeed * Time.deltaTime) ;
             }

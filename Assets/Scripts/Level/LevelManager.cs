@@ -14,6 +14,7 @@ namespace Bomberman.Level
     /// </summary>
     public class LevelManager : MonoBehaviour
     {
+        [SerializeField] private ScoreModel _scoreModel;
         [SerializeField] private LivesModel _livesModel;
         [SerializeField] private TimerModel _timerModel;
         [SerializeField] private float _timeToDisplayLevelTextFor = 1f;
@@ -28,15 +29,15 @@ namespace Bomberman.Level
 
         private void OnEnable()
         {
-            GameEvents.instance.OnLevelComplete += LoadNextLevel;
-            GameEvents.instance.OnPlayerDeath += FailPlayer;
+            GameEvent.OnLevelComplete += LoadNextLevel;
+            GameEvent.OnPlayerDeath += FailPlayer;
             _timerModel.OnTimeLeftOnCurrentLevelChanged += CheckForTimeout;
         }
 
         private void OnDisable()
         {
-            GameEvents.instance.OnLevelComplete -= LoadNextLevel;
-            GameEvents.instance.OnPlayerDeath -= FailPlayer;
+            GameEvent.OnLevelComplete -= LoadNextLevel;
+            GameEvent.OnPlayerDeath -= FailPlayer;
             _timerModel.OnTimeLeftOnCurrentLevelChanged -= CheckForTimeout;
         }
 
@@ -64,7 +65,7 @@ namespace Bomberman.Level
         private void LoadFirstLevel()
         {
             _currentLevelIndex = 0;
-            ScoreModel.instance.Score = 0;
+            _scoreModel.Score = 0;
             _livesModel.LivesLeft = _livesModel.StartingLives;
             BeginCurrentLevelLoadSequence();
         }
@@ -74,13 +75,13 @@ namespace Bomberman.Level
         {
             _currentLevelIndex++;
             _livesModel.LivesLeft++;
-            ScoreModel.instance.Score += _timerModel.TimeLeftOnCurrentLevel * ScoreModel.instance.ScorePerSecondLeft;
+            _scoreModel.Score += _timerModel.TimeLeftOnCurrentLevel * _scoreModel.ScorePerSecondLeft;
             BeginCurrentLevelLoadSequence();
         }
 
         private void BeginCurrentLevelLoadSequence()
         {
-            ScoreModel.instance.CanScore = false;
+            _scoreModel.CanScore = false;
             Fader.Instance.OnFadeComplete += LoadLevelFromFade;
             Fader.Instance.FadeOut();
             
@@ -89,7 +90,7 @@ namespace Bomberman.Level
         private void LoadLevelFromFade()
         {
             Fader.Instance.OnFadeComplete -= LoadLevelFromFade;
-            GameEvents.instance.OnLevelTeardown?.Invoke();
+            GameEvent.OnLevelTeardown?.Invoke();
             StartCoroutine(FadeOutIntoLevel());
         }
 
@@ -98,8 +99,8 @@ namespace Bomberman.Level
             _levelView.LoadLevel(_levelModels[_currentLevelIndex]);
             Fader.Instance.DisplayText(_levelModels[_currentLevelIndex].LevelName);
             yield return new WaitForSeconds(_timeToDisplayLevelTextFor);
-            GameEvents.instance.OnLevelSetupComplete?.Invoke();
-            ScoreModel.instance.CanScore = true;
+            GameEvent.OnLevelSetupComplete?.Invoke();
+            _scoreModel.CanScore = true;
             Fader.Instance.FadeIn();
         }
     }

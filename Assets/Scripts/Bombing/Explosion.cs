@@ -15,12 +15,12 @@ namespace Bomberman.Bombing
 
         private void OnEnable()
         {
-            GameEvents.instance.OnLevelTeardown += Cleanup;
+            GameEvent.OnLevelTeardown += Cleanup;
         }
 
         private void OnDisable()
         {
-            GameEvents.instance.OnLevelTeardown -= Cleanup;
+            GameEvent.OnLevelTeardown -= Cleanup;
         }
 
         private void Cleanup()

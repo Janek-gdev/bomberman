@@ -22,13 +22,13 @@ namespace Bomberman.Player
         private void OnEnable()
         {
             _layBomb.action.performed += OnLayBombPerformed;
-            GameEvents.instance.OnLevelTeardown += RemoveBombs;
+            GameEvent.OnLevelTeardown += RemoveBombs;
         }
 
         private void OnDisable()
         {
             _layBomb.action.performed -= OnLayBombPerformed;
-            GameEvents.instance.OnLevelTeardown -= RemoveBombs;
+            GameEvent.OnLevelTeardown -= RemoveBombs;
         }
 
         private void RemoveBombs()

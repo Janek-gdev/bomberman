@@ -1406,6 +1406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e325d5336eb43498623572392fb1a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelLayoutGeneratorModel: {fileID: 11400000, guid: d414f7b9d1620964384be07db7e98576, type: 2}
 --- !u!4 &1729755385
 Transform:
   m_ObjectHideFlags: 0
@@ -1433,6 +1434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f992ee7ef3b34317845979e361f05162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scoreModel: {fileID: 11400000, guid: 52d65fb70234e3f479022847c9c3f332, type: 2}
   _livesModel: {fileID: 11400000, guid: 0f7ce3192642ca344a76991b03a83f64, type: 2}
   _timerModel: {fileID: 11400000, guid: e9022e8cf6f23e64a89169e3af67657f, type: 2}
   _timeToDisplayLevelTextFor: 1

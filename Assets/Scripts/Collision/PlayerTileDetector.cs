@@ -11,7 +11,8 @@ namespace Bomberman.Collisions
     public class PlayerTileDetector : MonoBehaviour
     {
         [SerializeField] private PlayerModel _playerModel;
-        
+        [SerializeField] private LevelLayoutGeneratorModel _levelLayoutGeneratorModel;
+
         private WalkableTileModel _tile;
         public event Action<bool> OnPlayerIsOnTileChanged;
         private bool _playerIsOnTile;
@@ -31,7 +32,7 @@ namespace Bomberman.Collisions
 
         private void Awake()
         {
-            _tile = LevelLayoutGeneratorModel.instance.GetClosestFreeTile(transform);
+            _tile = _levelLayoutGeneratorModel.GetClosestFreeTile(transform);
         }
 
         private void OnEnable()

@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4754e4cdbb6647829da12488ff7765cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelLayoutGeneratorModel: {fileID: 11400000, guid: d414f7b9d1620964384be07db7e98576, type: 2}
   _target: {fileID: 7298083703301079176}
   _uiCameraOffset: 1
 --- !u!1001 &4765425748639183288

@@ -18,13 +18,13 @@ namespace Bomberman.Player
         private void OnEnable()
         {
             _playerModel.OnIsAliveChanged += OnPlayerAliveChanged;
-            GameEvents.instance.OnLevelSetupComplete += SetPlayerAlive;
+            GameEvent.OnLevelSetupComplete += SetPlayerAlive;
         }
 
         private void OnDisable()
         {
             _playerModel.OnIsAliveChanged -= OnPlayerAliveChanged;
-            GameEvents.instance.OnLevelSetupComplete -= SetPlayerAlive;
+            GameEvent.OnLevelSetupComplete -= SetPlayerAlive;
         }
 
         private void OnPlayerAliveChanged(bool _)
@@ -56,7 +56,7 @@ namespace Bomberman.Player
             _animator.SetBool(IsDead, true);
             yield return new WaitForSeconds(0.3f);
             _playerPowerUpModel.RemoveAllPowerUps();
-            GameEvents.instance.OnPlayerDeath?.Invoke();
+            GameEvent.OnPlayerDeath?.Invoke();
         }
 
         public void GetBombed()

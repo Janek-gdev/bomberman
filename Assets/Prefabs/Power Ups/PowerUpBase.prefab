@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerModel: {fileID: 11400000, guid: 0af00f853f82ee84e94da3e3fa7e31a2, type: 2}
+  _levelLayoutGeneratorModel: {fileID: 11400000, guid: d414f7b9d1620964384be07db7e98576, type: 2}
 --- !u!114 &769466802023812300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,6 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _score: 1000
+  _scoreModel: {fileID: 11400000, guid: 52d65fb70234e3f479022847c9c3f332, type: 2}
 --- !u!1 &8002845276044395733
 GameObject:
   m_ObjectHideFlags: 0

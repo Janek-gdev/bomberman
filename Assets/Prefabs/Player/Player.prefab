@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9eaa10890ef4cc59c329163203426f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelLayoutGeneratorModel: {fileID: 11400000, guid: d414f7b9d1620964384be07db7e98576, type: 2}
   _playerModel: {fileID: 11400000, guid: 0af00f853f82ee84e94da3e3fa7e31a2, type: 2}
   _animator: {fileID: 4975979542947515097}
   _spriteRenderer: {fileID: 6127285084217333824}

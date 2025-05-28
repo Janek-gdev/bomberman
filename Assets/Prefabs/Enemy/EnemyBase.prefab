@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _score: 100
+  _scoreModel: {fileID: 11400000, guid: 52d65fb70234e3f479022847c9c3f332, type: 2}
 --- !u!1 &8496636576529824816
 GameObject:
   m_ObjectHideFlags: 0

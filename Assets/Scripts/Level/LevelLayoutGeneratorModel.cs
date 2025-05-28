@@ -9,7 +9,7 @@ namespace Bomberman.Level
     /// </summary>
     [CreateAssetMenu(menuName = ScriptableObjectMenuName.LevelLayout + nameof(LevelLayoutGeneratorModel),
         fileName = nameof(LevelLayoutGeneratorModel))]
-    public class LevelLayoutGeneratorModel : ResettableScriptableSingleton<LevelLayoutGeneratorModel>
+    public class LevelLayoutGeneratorModel : ResettableScriptableObject
     {
         public const float TileWidth = 1f;
         public const float HalfTileWidth = TileWidth/2;
