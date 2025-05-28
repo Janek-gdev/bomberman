@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: _score
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 2364501757272065064, guid: 544499f5f05346a40bc84063fb4a12b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ee660f6c28fb15842b1f569b19a489cf, type: 2}
     - target: {fileID: 3581669411941907349, guid: 544499f5f05346a40bc84063fb4a12b4, type: 3}
       propertyPath: _nonWalkableLayerMask.m_Bits
       value: 64

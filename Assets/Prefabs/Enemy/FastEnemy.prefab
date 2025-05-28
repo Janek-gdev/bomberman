@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: _score
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 2364501757272065064, guid: 544499f5f05346a40bc84063fb4a12b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9e33de9ac400cb542a3eedcf1992a7f5, type: 2}
     - target: {fileID: 3687566003528153041, guid: 544499f5f05346a40bc84063fb4a12b4, type: 3}
       propertyPath: m_Name
       value: FastEnemy
@@ -60,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -533713545, guid: 00e4e94d105a4ea49abf4d70fb50153f, type: 3}
+    - target: {fileID: 8253302411049575963, guid: 544499f5f05346a40bc84063fb4a12b4, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8608212981328696459, guid: 544499f5f05346a40bc84063fb4a12b4, type: 3}
       propertyPath: _enemyModel
       value: 

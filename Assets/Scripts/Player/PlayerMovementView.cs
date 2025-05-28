@@ -1,8 +1,10 @@
-﻿using Bomberman.Collisions;
+﻿using System;
+using Bomberman.Collisions;
 using Bomberman.Level;
 using Bomberman.Utility;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR;
 
 namespace Bomberman.Player
 {
@@ -14,9 +16,16 @@ namespace Bomberman.Player
     {
         [SerializeField] private PlayerModel _playerModel;
         [SerializeField] private Animator _animator;
+        [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private DirectionalCollisionDetector _directionalCollisionDetector;
         
         [SerializeField] private InputActionReference _moveInput;
+        private static readonly int RunLeft = Animator.StringToHash("RunLeft");
+        private static readonly int RunRight = Animator.StringToHash("RunRight");
+        private static readonly int RunUp = Animator.StringToHash("RunUp");
+        private static readonly int RunDown = Animator.StringToHash("RunDown");
+        private static readonly int X = Animator.StringToHash("X");
+        private static readonly int Y = Animator.StringToHash("Y");
 
         private void OnEnable()
         {
@@ -41,6 +50,7 @@ namespace Bomberman.Player
                 return;
             }
             var strongestMovementDirection = GetInputDirection(_moveInput.action.ReadValue<Vector2>());
+            SetAnimation(strongestMovementDirection);
             if (_directionalCollisionDetector.IsDirectionWalkable(strongestMovementDirection))
             {
                 var movement = (Vector3) DirectionUtility.GetDirectionVector(strongestMovementDirection) *
@@ -51,6 +61,36 @@ namespace Bomberman.Player
             }
 
             _playerModel.CurrentTile = LevelLayoutGeneratorModel.instance.GetClosestFreeTile(transform);
+        }
+
+        private void SetAnimation(Direction strongestMovementDirection)
+        {
+            _animator.speed = strongestMovementDirection == Direction.None ? 0 : 1;
+            _spriteRenderer.flipX = strongestMovementDirection == Direction.Left;
+            Debug.Log(strongestMovementDirection);
+            switch (strongestMovementDirection)
+            {
+                case Direction.Left:
+                    _animator.SetFloat(X, 1f);
+                    _animator.SetFloat(Y, 0f);
+                    break;
+                case Direction.Right:
+                    _animator.SetFloat(X, -1f);
+                    _animator.SetFloat(Y, 0f);
+                    break;
+                case Direction.Up:
+                    _animator.SetFloat(X, 0f);
+                    _animator.SetFloat(Y, 1f);
+                    break;
+                case Direction.Down:
+                    _animator.SetFloat(X, 0f);
+                    _animator.SetFloat(Y, -1f);
+                    break;
+                case Direction.None:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(strongestMovementDirection), strongestMovementDirection, null);
+            }
         }
 
         private Direction GetInputDirection(Vector2 input)

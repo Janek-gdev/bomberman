@@ -1,4 +1,5 @@
-﻿using Bomberman.Collisions;
+﻿using System;
+using Bomberman.Collisions;
 using Bomberman.Player;
 using UnityEngine;
 
@@ -31,6 +32,11 @@ namespace Bomberman.Enemies
             _directionDataCollection[2] = new CollisionDirectionData(false, Direction.Up);
             _directionDataCollection[3] = new CollisionDirectionData(false, Direction.Down);
             _tileMovable.MoveSpeed = _enemyModel.MoveSpeed;
+        }
+
+        protected virtual void OnDisable()
+        {
+            _tileMovable.TargetPosition = transform.position;
         }
     }
 }

@@ -3,7 +3,7 @@ guid: 00e4e94d105a4ea49abf4d70fb50153f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,9 +64,10 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -75,9 +77,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -103,6 +107,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -124,6 +129,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -145,6 +151,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -166,6 +173,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -187,6 +195,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -208,6 +217,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -229,6 +239,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -250,6 +261,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -271,6 +283,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -292,6 +305,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -313,6 +327,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -334,6 +349,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -355,6 +371,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -376,6 +393,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -397,6 +415,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -418,6 +437,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -439,6 +459,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -460,6 +481,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -481,6 +503,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -502,6 +525,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -523,6 +547,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -538,12 +563,13 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 225
-        y: 534
+        y: 532
         width: 33
-        height: 33
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -559,12 +585,13 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 264
-        y: 543
-        width: 24
-        height: 24
+        y: 532
+        width: 33
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -580,12 +607,13 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 303
-        y: 554
-        width: 9
-        height: 6
+        y: 532
+        width: 33
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -597,58 +625,17 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_30
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 493
-        width: 30
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d742a500c4a59c44e8f320b365100157
-      internalID: -163756347
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_31
       rect:
         serializedVersion: 2
-        x: 42
-        y: 493
-        width: 30
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a3f522b1afdcd444b0a8d9f920279b0
-      internalID: 32786948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_32
-      rect:
-        serializedVersion: 2
-        x: 77
+        x: 41
         y: 493
         width: 36
         height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -670,6 +657,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -691,6 +679,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -712,6 +701,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -733,6 +723,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -754,75 +745,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: c54c9f02abdd6b74d808cd0ca80f8133
       internalID: -1592646531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_38
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 461
-        width: 24
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6f8b5e3ff31e3d4980bbce6ba1dc7ff
-      internalID: -530674358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_39
-      rect:
-        serializedVersion: 2
-        x: 246
-        y: 463
-        width: 18
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05cd60973e7131c469292018faea8c93
-      internalID: -604018846
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_40
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 476
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef4962980ca79f64eaf0f9e4716f7e6f
-      internalID: 902779735
       vertices: []
       indices: 
       edges: []
@@ -838,6 +767,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -859,6 +789,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -880,6 +811,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -901,6 +833,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -922,6 +855,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -943,6 +877,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -964,6 +899,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -985,6 +921,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -996,16 +933,17 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_52
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_
       rect:
         serializedVersion: 2
-        x: 210
-        y: 369
-        width: 32
-        height: 6
+        x: 180
+        y: 368
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1020,13 +958,14 @@ TextureImporter:
       name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_53
       rect:
         serializedVersion: 2
-        x: 98
-        y: 369
+        x: 13
+        y: 326
         width: 36
-        height: 33
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1041,13 +980,14 @@ TextureImporter:
       name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_55
       rect:
         serializedVersion: 2
-        x: 186
-        y: 393
-        width: 24
-        height: 6
+        x: 54
+        y: 326
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1062,103 +1002,20 @@ TextureImporter:
       name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_59
       rect:
         serializedVersion: 2
-        x: 195
-        y: 381
-        width: 21
-        height: 6
+        x: 140
+        y: 326
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: e66d8b9771d6382459c2ece4fcf6f2cc
       internalID: -2110979209
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_64
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 326
-        width: 30
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8db69047d4be5ab48bcb293a9d38156a
-      internalID: 166218796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_65
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 327
-        width: 30
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 345ec248ce487c74b9505077e319cba0
-      internalID: -378209094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_66
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 327
-        width: 36
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d36ef04fa159e3a40948b0262299ce5d
-      internalID: -2035480855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_67
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 325
-        width: 30
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25160374d9c3bf64092226388f6da8fe
-      internalID: -1020144409
       vertices: []
       indices: 
       edges: []
@@ -1174,6 +1031,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1195,6 +1053,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1216,6 +1075,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1237,6 +1097,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1258,6 +1119,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1279,6 +1141,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1300,6 +1163,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1321,6 +1185,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1342,6 +1207,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1363,6 +1229,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1384,6 +1251,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1405,6 +1273,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1426,6 +1295,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1447,6 +1317,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1468,6 +1339,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1489,75 +1361,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 97a0e9c15f1c337489edb8de5c14e991
       internalID: 49164589
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_84
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 109
-        width: 36
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9362a5e2d2a81d745941a42145d95039
-      internalID: -724456243
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_85
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 107
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90dc9254312b59d4dab26edd85040052
-      internalID: 553622527
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_86
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 106
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38fd3df80b67c6443849d8301aa70507
-      internalID: -918058967
       vertices: []
       indices: 
       edges: []
@@ -1573,6 +1383,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1594,6 +1405,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1615,6 +1427,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1636,6 +1449,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1657,6 +1471,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1678,6 +1493,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1699,6 +1515,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1720,6 +1537,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1741,6 +1559,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1755,13 +1574,14 @@ TextureImporter:
       name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_23
       rect:
         serializedVersion: 2
-        x: 142
-        y: 393
-        width: 27
-        height: 9
+        x: 98
+        y: 369
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1776,13 +1596,14 @@ TextureImporter:
       name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_25
       rect:
         serializedVersion: 2
-        x: 180
-        y: 381
-        width: 9
-        height: 6
+        x: 139
+        y: 368
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1804,6 +1625,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1815,205 +1637,17 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_27
-      rect:
-        serializedVersion: 2
-        x: 285
-        y: 534
-        width: 12
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 420cf77554e189d49ae222c4003e235f
-      internalID: -296009492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_28
-      rect:
-        serializedVersion: 2
-        x: 327
-        y: 554
-        width: 9
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d700002a8b6ab594b89973b14226a5fc
-      internalID: -1253476051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_29
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 534
-        width: 9
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31cd02a60e742e7499a435d6c89167d4
-      internalID: 1033518168
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_41
-      rect:
-        serializedVersion: 2
-        x: 276
-        y: 534
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f48a7e5822691a4db8a8f49230001fd
-      internalID: 1882124774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_42
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 536
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19b86b92e108b824eb7ccb72240fa1e6
-      internalID: 256883456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_43
-      rect:
-        serializedVersion: 2
-        x: 327
-        y: 536
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3727c26dfb984ad43b87122070d4b3ea
-      internalID: 1623030611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_54
-      rect:
-        serializedVersion: 2
-        x: 284
-        y: 476
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b8fd137c6154d845a31e36d7efc2470
-      internalID: 764845988
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_56
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 467
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5357de00abf7184697faf79a6957f5a
-      internalID: -1586072519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_57
-      rect:
-        serializedVersion: 2
-        x: 284
-        y: 467
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0608e4f63e678004f9e852817e7c0e9d
-      internalID: 1225162216
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_58
       rect:
         serializedVersion: 2
-        x: 139
-        y: 381
-        width: 9
-        height: 9
+        x: 98
+        y: 326
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2028,13 +1662,14 @@ TextureImporter:
       name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_60
       rect:
         serializedVersion: 2
-        x: 154
-        y: 381
-        width: 21
-        height: 9
+        x: 98
+        y: 107
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2049,13 +1684,14 @@ TextureImporter:
       name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_61
       rect:
         serializedVersion: 2
-        x: 139
-        y: 369
-        width: 18
-        height: 9
+        x: 55
+        y: 107
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2070,13 +1706,14 @@ TextureImporter:
       name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_62
       rect:
         serializedVersion: 2
-        x: 163
-        y: 369
-        width: 12
-        height: 9
+        x: 13
+        y: 107
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2088,27 +1725,139 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_63
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_30
       rect:
         serializedVersion: 2
-        x: 180
-        y: 369
-        width: 21
-        height: 6
+        x: 5
+        y: 493
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20e5587e9b97d544e8ca2d774574b6d5
-      internalID: 2059093369
+      spriteID: eb8b5222a27843240879636653c69b35
+      internalID: -163756347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_32
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 493
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808cc69ec4eef8342ace7e8309cc0c55
+      internalID: -111387794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_52
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 368
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28e3e0520635184084dfabceb6776e1
+      internalID: -1865011126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_27
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 455
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d77325c1386134f9819a8d09088e27
+      internalID: -296009492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_28
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 455
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4a27c8f77b803448364e9eb06da1f0
+      internalID: -1253476051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_29
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 455
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8cb6180e01a0ae41af9c1926f4d2962
+      internalID: 1033518168
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 3186022bc0513054bbe4b795a34cdc86
@@ -2118,7 +1867,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_: 672119692
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_0: 1603658788
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_1: -440683394
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_10: 1177356501
@@ -2144,8 +1896,8 @@ TextureImporter:
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_29: 1033518168
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_3: -211935195
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_30: -163756347
-      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_31: 32786948
-      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_32: 992446965
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_31: 992446965
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_32: -111387794
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_33: -464061714
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_34: -73089621
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_35: -713440994
@@ -2167,7 +1919,7 @@ TextureImporter:
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_5: -1134151325
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_50: -439467780
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_51: -509072129
-      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_52: 672119692
+      PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_52: -1865011126
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_53: 1857764096
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_54: 764845988
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_55: -1416548409
@@ -2215,9 +1967,8 @@ TextureImporter:
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_93: 1180606409
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_94: -546552322
       PalmOS - Bomberman for Palm OS - Bomberman Enemies Bombs Items & Blocks_95: -392954538
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

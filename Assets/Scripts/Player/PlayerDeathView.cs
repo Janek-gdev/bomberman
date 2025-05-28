@@ -10,8 +10,10 @@ namespace Bomberman.Player
     /// </summary>
     public class PlayerDeathView : MonoBehaviour, IBombable
     {
+        [SerializeField] private Animator _animator;
         [SerializeField] private PlayerModel _playerModel;
         [SerializeField] private PlayerPowerUpModel _playerPowerUpModel;
+        private static readonly int IsDead = Animator.StringToHash("IsDead");
 
         private void OnEnable()
         {
@@ -25,17 +27,22 @@ namespace Bomberman.Player
             GameEvents.instance.OnLevelSetupComplete -= SetPlayerAlive;
         }
 
-        private void SetPlayerAlive()
-        {
-            _playerModel.IsAlive = true;
-        }
-
         private void OnPlayerAliveChanged(bool _)
         {
             if (!_playerModel.IsAlive)
             {
                 StartCoroutine(PlayerDeath());
             }
+            else
+            {
+                _animator.speed = 1f;
+                _animator.SetBool(IsDead, false);
+            }
+        }
+
+        private void SetPlayerAlive()
+        {
+            _playerModel.IsAlive = true;
         }
 
         public void Kill()
@@ -45,7 +52,8 @@ namespace Bomberman.Player
 
         private IEnumerator PlayerDeath()
         {
-            //todo animation event
+            _animator.speed = 1f;
+            _animator.SetBool(IsDead, true);
             yield return new WaitForSeconds(0.3f);
             _playerPowerUpModel.RemoveAllPowerUps();
             GameEvents.instance.OnPlayerDeath?.Invoke();
