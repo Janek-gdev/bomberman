@@ -27,8 +27,8 @@ namespace Bomberman.Level
         [SerializeField] private LevelPrefabsModel _levelPrefabsModel;
 
         //todo move these to own models?
-        public List<EnemyView> SpawnedEnemies { get; set; }
-        public List<DestructibleTileView> SpawnedDestructibleTiles { get; set; }
+        public List<EnemyView> SpawnedEnemies { get; set; } = new();
+        public List<DestructibleTileView> SpawnedDestructibleTiles { get; set; } = new();
 
         public List<EnemyCounter> Enemies => _enemies;
         public int DestructibleTileCount => _destructibleTileCount;

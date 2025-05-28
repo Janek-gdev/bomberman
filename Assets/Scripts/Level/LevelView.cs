@@ -182,6 +182,13 @@ namespace Bomberman.Level
                 Destroy(additionalSpawnedObject);
             }
 
+            foreach (var tile in _levelLayoutGeneratorModel.WalkableTiles)
+            {
+                tile.IsBlocked = false;
+                tile.IsExit = false;
+                tile.PowerUp = PowerUp.None;
+            }
+
             _levelModel.SpawnedDestructibleTiles = new List<DestructibleTileView>();
             _levelModel.SpawnedEnemies = new List<EnemyView>();
             _additionalSpawnedObjects = new List<GameObject>();

@@ -19,7 +19,7 @@ namespace Bomberman.Player
         [SerializeField] private int _destructibleLayer;
         [SerializeField] private int _playerLayer;
 
-        private List<PowerUp> _powerUps;
+        private List<PowerUp> _powerUps = new();
         public IReadOnlyCollection<PowerUp> PowerUps => _powerUps.AsReadOnly();
 
         [ContextMenu("Give Bomb Up")] public void GiveBombUp() => Add(PowerUp.BombUp);

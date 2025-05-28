@@ -8,6 +8,7 @@ namespace Bomberman.Level
     {
         [SerializeField] private PlayerTileDetector _playerTileDetector;
         private LevelModel _levelModel;
+        private WalkableTileModel _walkableTileModel;
         private void OnEnable()
         {
             _playerTileDetector.OnPlayerIsOnTileChanged += OnPlayerEntersTile;
@@ -21,7 +22,8 @@ namespace Bomberman.Level
         public void Initialize(LevelModel levelModel, WalkableTileModel walkableTileModel)
         {
             _levelModel = levelModel;
-            walkableTileModel.IsBlocked = true;
+            _walkableTileModel = walkableTileModel;
+            _walkableTileModel.IsBlocked = true;
         }
 
         private void OnPlayerEntersTile(bool obj)
@@ -29,6 +31,7 @@ namespace Bomberman.Level
             if (_levelModel.SpawnedEnemies.Count == 0)
             {
                 GameEvent.OnLevelComplete?.Invoke();
+                _walkableTileModel.IsBlocked = false;
             }
         }
     }

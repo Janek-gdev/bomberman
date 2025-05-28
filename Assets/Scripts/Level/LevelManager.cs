@@ -75,6 +75,10 @@ namespace Bomberman.Level
         {
             _currentLevelIndex++;
             _livesModel.LivesLeft++;
+            if (_currentLevelIndex >= _levelModels.Count)
+            {
+                _currentLevelIndex = 0;
+            }
             _scoreModel.Score += _timerModel.TimeLeftOnCurrentLevel * _scoreModel.ScorePerSecondLeft;
             BeginCurrentLevelLoadSequence();
         }
