@@ -55,7 +55,11 @@ namespace Bomberman.Timing
 
         private void StopTimer()
         {
-            StopCoroutine(_timer);
+            if (_timer != null)
+            {
+                StopCoroutine(_timer);
+            }
+
             _timer = null;
         }
 
